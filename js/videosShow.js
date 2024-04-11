@@ -19,7 +19,7 @@ form.onchange = function (e) {
       contSelection.innerHTML = `<div class="content-type" id="content-type">
                     <button class="btns" id="uiux">UI/UX Design</button>
                     <button class="btns" id="webdev">Web Development</button>
-                    <button class="btns" id="others">Other Languages</button>
+                    <button class="btns" id="others">Classic & Essential Languages</button>
                     <button class="btns" id="appscript">App-Script (Google Sheets)</button>
                </div>
                <hr class="lineButton">
@@ -170,7 +170,7 @@ form.onchange = function (e) {
             <div class="video-cat" id="video-cat">
                 <div class="category show" id="otherCatEng">
                     <div class="heading-text">
-                        <h2 class="otherlang">Other Languages</h2>
+                        <h2 class="otherlang">Classic & Essential Languages</h2>
                     </div>
                     <hr>
                     <div class="video-content-cont">
@@ -214,7 +214,7 @@ form.onchange = function (e) {
                     <div class="video-content-cont">
                         <div class="video-container">
                             <div class="video-category">
-                                <h2>Data Structure & Algorithms using C</h2>
+                                <h2>Data Structure & Algorithms</h2>
                             </div>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/CBYHwZcbD-s?si=buFFkepiMlai8XU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             <div class="video-title">
@@ -222,6 +222,28 @@ form.onchange = function (e) {
                                         href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
                             </div>
                         </div>
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>Data Structure Using C & C++</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/B31LgI4Y4DQ?si=AjsbM-GLlFkhJ1qB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Data Structure using C & C++ Beginner to Professional by <a class="credits"
+                                        href="https://www.youtube.com/@freecodecamp.org" target="_blank">freecodecamp.org</a></h3>
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>Data Structure & Algorithms using Python</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/pkYVOmU3MgA?si=7lGAobBPNmYT0tgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Data Structure using Python Beginner to Professional by <a class="credits"
+                                        href="https://www.youtube.com/@freecodecamp.org" target="_blank">freecodecamp.org</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-content-cont">
                         <div class="video-container">
                             <div class="video-category">
                                 <h2>Java Language</h2>
@@ -246,8 +268,6 @@ form.onchange = function (e) {
                                         href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="video-content-cont">
                         <div class="video-container">
                             <div class="video-category">
                                 <h2>Python</h2>
@@ -464,7 +484,7 @@ form.onchange = function (e) {
               <div class="video-cat">
                   <div class="category show" id="pythonCatHindi">
                       <div class="heading-text">
-                          <h2 class="otherlang">Other Languages</h2>
+                          <h2 class="otherlang">Classic & Essential Languages</h2>
                       </div>
                       <hr>
                       <div class="video-content-cont">
