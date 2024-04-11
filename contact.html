@@ -42,33 +42,34 @@
         </header>
         <main>
             <div class="contact-container">
+                <span class="alertMsg">Sorry :), currently this form will not submit any enquiries.</span>
                 <form action="#">
                     <h1>Contact Us</h1>
                     <div class="row">
                         <div class="input-fields">
-                            <input type="text" name="first_name" id="fname" required>
+                            <input type="text" name="first_name" id="fname" title="Enter your first name" required>
                             <label for="fname">First Name</label>
                         </div>
                         <div class="input-fields">
-                            <input type="text" name="last_name" id="lname" required>
+                            <input type="text" name="last_name" id="lname" title="Enter your last name" required>
                             <label for="lname">Last Name</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-fields">
-                            <input type="email" name="email" id="email" required>
+                            <input type="email" name="email" id="email" title="Enter your email" required>
                             <label for="email">Email</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-fields">
-                            <textarea name="message" id="messages" input-fields="30" row="10" required></textarea>
+                            <textarea name="message" id="messages" title="Enter your message" cols="30" rows="10" required></textarea>
                             <label for="messages">Message</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-fields">
-                            <button type="submit">Submit</button>
+                            <button type="submit" onclick="popupMsg()">Submit</button>
                         </div>
                     </div>
                 </form>

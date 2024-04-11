@@ -1,5 +1,13 @@
 @import url("./style.css");
 
+.alertMsg{
+    padding: 20px;
+    background-color: var(--text-color-one);
+    color: var(--primary-text);
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
 .about-container {
     display: flex;
     justify-content: center;
@@ -47,7 +55,7 @@ form {
     padding: 20px;
     border-radius: 20px;
     width: 600px;
-    height: 600px;
+    height: auto;
     position: relative;
     box-shadow: 0px 10px 30px 2px #7a08af;
 }
@@ -85,9 +93,6 @@ form .row .input-fields label {
     position: absolute;
     top: 18px;
     left: 10px;
-}
-form .row .input-fields textarea{
-    height: 200px !important;
 }
 
 form .row .input-fields textarea,
