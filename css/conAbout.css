@@ -10,6 +10,7 @@
     margin: 20px 0;
 }
 
+
 .contact-container,
 .about-container {
     display: flex;
@@ -33,7 +34,7 @@
 
 
 .letsTalkBtn{
-    margin: 20px 0;
+    margin: 10px 0;
 }
  
 .letsTalkBtn a{
@@ -96,8 +97,10 @@
     padding: 10px 40px;
 }
 
+.about-container .text-container>h3,
 .about-container .text-container .brandName>a{
     text-decoration: none;
+    width: max-content;
     color: #d29922;
     background-color: #bb800926;
     border-radius: 2px;
