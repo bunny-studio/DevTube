@@ -1,5 +1,7 @@
 @import url("./style.css");
 
+/* About us & Contact us Styling */
+
 .alertMsg{
     padding: 20px;
     background-color: var(--text-color-one);
@@ -8,14 +10,27 @@
     margin: 20px 0;
 }
 
+.contact-container,
 .about-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 92vh;
+    background-color: #ccc;
+    color: var(--heading-text-color);
 }
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 
 .letsTalkBtn{
     margin: 20px 0;
@@ -40,38 +55,67 @@
     border: 2px solid var(--fa-primary-color);
 }
 
-.contact-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: calc(100vh - 80px);
-}
-
-form {
-    background-color: #fefefe;
-    color: #3c3c3c;
+.contactForm {
+    background-color: var(--primary-text);
+    color: var(--heading-text-color);
     padding: 20px;
     border-radius: 20px;
     width: 600px;
     height: auto;
     position: relative;
-    box-shadow: 0px 10px 30px 2px #7a08af;
+    box-shadow: 0px 10px 30px 2px var(--fa-primary-color);
+}
+.about-container h1{
+    margin: 80px 0 0;
 }
 
-form h1 {
+.about-container h1,
+.contactForm h1 {
     text-align: center;
     font-size: 48px;
 }
 
+.image-container img{
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px var(--fa-primary-color);
+}
 
-form .msg {
+.about-container .text-container{
+    width: 100%;
+    height: auto;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #0d1117;
+    color: var(--primary-text);
+}
+
+.about-container .text-container ul{
+    padding: 10px 40px;
+}
+
+.about-container .text-container .brandName>a{
+    text-decoration: none;
+    color: #d29922;
+    background-color: #bb800926;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.about-container .text-container .brandName>a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.contactForm .msg {
     margin: 10px;
     color: rgb(13, 184, 13);
 }
 
-form .row {
+.contactForm .row {
     display: flex;
     width: 100%;
     gap: 10px;
@@ -79,7 +123,7 @@ form .row {
     margin: 20px 0;
 }
 
-form .row .input-fields {
+.contactForm .row .input-fields {
     display: flex;
     width: 100%;
     height: auto;
@@ -88,15 +132,15 @@ form .row .input-fields {
     align-items: center;
 }
 
-form .row .input-fields label {
+.contactForm .row .input-fields label {
     color: #5e5e5e;
     position: absolute;
     top: 18px;
     left: 10px;
 }
 
-form .row .input-fields textarea,
-form .row .input-fields input {
+.contactForm .row .input-fields textarea,
+.contactForm .row .input-fields input {
     width: 100%;
     height: auto;
     padding: 15px 10px;
@@ -107,20 +151,20 @@ form .row .input-fields input {
     font-size: 18px;
 }
 
-form .row .input-fields textarea:not(:valid)~label,
-form .row .input-fields input:not(:valid)~label {
+.contactForm .row .input-fields textarea:not(:valid)~label,
+.contactForm .row .input-fields input:not(:valid)~label {
     color: rgb(212, 10, 10);
 }
 
-form .row .input-fields textarea:valid~label,
-form .row .input-fields input:valid~label {
+.contactForm .row .input-fields textarea:valid~label,
+.contactForm .row .input-fields input:valid~label {
     color: rgb(3, 206, 3);
 }
 
-form .row .input-fields textarea:valid~label,
-form .row .input-fields input:valid~label,
-form .row .input-fields textarea:focus~label,
-form .row .input-fields input:focus~label {
+.contactForm .row .input-fields textarea:valid~label,
+.contactForm .row .input-fields input:valid~label,
+.contactForm .row .input-fields textarea:focus~label,
+.contactForm .row .input-fields input:focus~label {
     top: -12px;
     left: 10px;
     font-size: 14px;
@@ -129,7 +173,7 @@ form .row .input-fields input:focus~label {
     transition: 0.3s ease;
 }
 
-form .row button {
+.contactForm .row button {
     padding: 10px 15px;
     outline: none;
     font-size: 14px;
@@ -141,7 +185,7 @@ form .row button {
     transition: 0.3s all ease;
 }
 
-form .addBtn {
+.contactForm .addBtn {
     color: #3c3c3c;
     background-color: aliceblue;
     padding: 10px 20px;
@@ -149,21 +193,21 @@ form .addBtn {
     border-radius: 5px;
 }
 
-form .row button[type="submit"] {
+.contactForm .row button[type="submit"] {
     background-color: rgb(13, 184, 13);
 }
 
-form .row button[type="submit"]:hover {
+.contactForm .row button[type="submit"]:hover {
     background-color: transparent;
     border: 2px solid rgb(13, 184, 13);
     color: rgb(13, 184, 13);
 }
 
-form .row button[type="reset"] {
+.contactForm .row button[type="reset"] {
     background-color: rgb(212, 10, 10);
 }
 
-form .row button[type="reset"]:hover {
+.contactForm .row button[type="reset"]:hover {
     background-color: transparent;
     border: 2px solid rgb(212, 10, 10);
     color: rgb(212, 10, 10);

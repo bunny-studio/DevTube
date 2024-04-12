@@ -34,6 +34,7 @@ html {
     --header-footer-bg: #FFFFFC;
     --common-text-color: #030303;
     --fade-text-color: #afadad;
+    --heading-text-color: #3c3c3c;
     --primary-text: #fefefe;
     --body-bg: #f5f3f3;
     --text-color-one: #FF1B1C;
@@ -97,6 +98,8 @@ body {
 #click {
     display: none;
 }
+
+/* header styling */
 
 header {
     display: flex;
@@ -192,6 +195,8 @@ header nav ul li a::after {
 header nav ul li a:hover {
     color: var(--svg-color);
 }
+
+/* index page styling */
 
 main {
     display: flex;
@@ -382,7 +387,7 @@ main {
     background-color: var(--alert-msg-bright-color);
     padding: 5px;
     border-radius: 2px;
-    text-shadow: 1px 2px #fefefe;
+    text-shadow: 1px 2px var(--primary-text);
     pointer-events: none;
 }
 
@@ -481,6 +486,8 @@ main {
     text-decoration: underline;
     text-shadow: 5px 5px 5px var(--primary-text);
 }
+
+/* Footer */
 
 footer {
     display: flex;
