@@ -26,7 +26,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--text-color-one);
+    background: var(--msg-color-one);
 }
 
 :root {
@@ -37,7 +37,8 @@ html {
     --heading-text-color: #3c3c3c;
     --primary-text: #fefefe;
     --body-bg: #f5f3f3;
-    --text-color-one: #FF1B1C;
+    --msg-color-one: #FF1B1C;
+    --msg-color-two: #0fec0f;
     --text-color-two: #FF7F11;
     --alert-msg-bright-color: #f9ce34;
     --svg-color: #81689D;
@@ -65,7 +66,7 @@ body {
     height: 100px;
     padding: 10px;
     border-radius: 10px;
-    background-color: var(--text-color-one);
+    background-color: var(--msg-color-one);
     position: absolute;
     right: -400px;
     top: 90px;
@@ -399,10 +400,10 @@ main {
 }
 
 .content .note>h3>span {
-    color: var(--text-color-one);
+    color: var(--msg-color-one);
     background-color: var(--header-footer-bg);
     padding: 5px;
-    border: 2px dashed var(--text-color-one);
+    border: 2px dashed var(--msg-color-one);
 }
 
 
@@ -489,10 +490,16 @@ main {
 }
 
 /* About us & Contact us Styling */
-
-.alertMsg{
+.popupGreen {
+    background-color: var(--msg-color-two);
     padding: 20px;
-    background-color: var(--text-color-one);
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.alertMsg {
+    background-color: var(--msg-color-one);
+    padding: 20px;
     color: var(--primary-text);
     border-radius: 5px;
     margin: 20px 0;
@@ -512,7 +519,7 @@ main {
     color: var(--heading-text-color);
 }
 
-.info{
+.info {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -520,31 +527,42 @@ main {
     flex-direction: column;
 }
 
-
-.letsTalkBtn{
+.letsTalkBtn {
     margin: 10px 0;
-}
- 
-.letsTalkBtn a{
-    text-decoration: none;
-    padding: 10px;
-    background-color: var(--fa-primary-color);
-    color: var(--primary-text);
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
     border-radius: 5px;
-    border: 2px solid transparent;
-    transition: all 0.2s ease-in-out;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;   
+    background-color: var(--fa-primary-color);
 }
 
-.letsTalkBtn a:hover{
-    cursor: pointer;
-    background-color: transparent;
-    color: var(--fa-primary-color);
+.letsTalkBtn a {
+    text-decoration: none;
+}
+
+.letsTalks {
+    display: block;
+    box-sizing: border-box;
     border: 2px solid var(--fa-primary-color);
+    border-radius: 5px;
+    padding: 0.75em 1.5em;
+    background: var(--primary-text);
+    color: var(--fa-primary-color);
+    transform: translateY(-0.44em);
+    transition: transform 0.1s ease;
+}
+
+.letsTalkBtn:active .letsTalks {
+    transform: translateY(0);
+}
+
+.letsTalkBtn:checked .letsTalks {
+    cursor: pointer;
+    transform: translateY(-0.2em);
 }
 
 .contactForm {
+    align-items: center;
     background-color: var(--primary-text);
     color: var(--heading-text-color);
     padding: 20px;
@@ -554,7 +572,8 @@ main {
     position: relative;
     box-shadow: 0px 10px 30px 2px var(--fa-primary-color);
 }
-.about-container h1{
+
+.about-container h1 {
     margin: 80px 0 0;
 }
 
@@ -564,14 +583,14 @@ main {
     font-size: 48px;
 }
 
-.image-container img{
+.image-container img {
     width: 400px;
     height: auto;
     border-radius: 10px;
     box-shadow: 10px 10px 10px var(--fa-primary-color);
 }
 
-.about-container .text-container{
+.about-container .text-container {
     width: 100%;
     height: auto;
     margin: 20px;
@@ -581,12 +600,12 @@ main {
     color: var(--primary-text);
 }
 
-.about-container .text-container ul{
+.about-container .text-container ul {
     padding: 10px 40px;
 }
 
 .about-container .text-container>h3,
-.about-container .text-container .brandName>a{
+.about-container .text-container .brandName>a {
     text-decoration: none;
     width: max-content;
     color: #d29922;
@@ -595,7 +614,7 @@ main {
     padding: 2px;
 }
 
-.about-container .text-container .brandName>a:hover{
+.about-container .text-container .brandName>a:hover {
     cursor: pointer;
     text-decoration: underline;
 }

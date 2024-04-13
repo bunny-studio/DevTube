@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/caa13318f3.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./images/vs-favicons.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/mediaQuery.css">
-    <title>About Us | DevTube | Vesus Studio</title>
+    <title>Contact Us | DevTube | Vesus Studio</title>
 </head>
 
 <body>
@@ -42,16 +42,23 @@
         </header>
         <main>
             <section class="contact-container">
-                <span class="alertMsg">Sorry :), currently this form will not submit any enquiries.</span>
-                <form action="#" class="contactForm">
+                <!-- <span class="alertMsg" id="msg">Sorry :), currently this form will not submit any enquiries.</span> -->
+                <span id="msg"></span>
+                <form action="#" method="post" id="contactForm" class="contactForm">
                     <h1>Contact Us</h1>
                     <div class="row">
                         <div class="input-fields">
-                            <input type="text" name="first_name" id="fname" title="Enter your first name" required>
+                            <input type="datetime-local" name="timestamps" id="timestamp" title="Enter your timestamp" required>
+                            <label for="timestamp">Timestamp</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-fields">
+                            <input type="text" name="firstName" id="fname" title="Enter your first name" required>
                             <label for="fname">First Name</label>
                         </div>
                         <div class="input-fields">
-                            <input type="text" name="last_name" id="lname" title="Enter your last name" required>
+                            <input type="text" name="lastName" id="lname" title="Enter your last name" required>
                             <label for="lname">Last Name</label>
                         </div>
                     </div>
@@ -63,13 +70,14 @@
                     </div>
                     <div class="row">
                         <div class="input-fields">
-                            <textarea name="message" id="messages" title="Enter your message" cols="30" rows="10" required></textarea>
+                            <textarea name="message" id="messages" title="Enter your message" cols="30" rows="5"
+                                required></textarea>
                             <label for="messages">Message</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-fields">
-                            <button type="submit" onclick="popupMsg()">Submit</button>
+                            <button type="submit" name="submit" id="submitBtn">Submit</button>
                         </div>
                     </div>
                 </form>
@@ -92,6 +100,68 @@
     </div>
     <script src="./js/script.js"></script>
     <script src="./js/videosShow.js"></script>
+    <script>
+
+        // Contact Page Data Transferring to Google Sheets
+        document.addEventListener("DOMContentLoaded", () => {
+            function getFormattedDateTime() {
+                const now = new Date();
+                const year = now.getFullYear();
+                const month = ('0' + (now.getMonth() + 1)).slice(-2);
+                const day = ('0' + now.getDate()).slice(-2);
+                const hours = ('0' + now.getHours()).slice(-2);
+                const minutes = ('0' + now.getMinutes()).slice(-2);
+                return `${year}-${month}-${day}T${hours}:${minutes}`;
+            }
+
+            
+            const url = "https://script.google.com/macros/s/AKfycbxODhnt7beD9gRfLtgHHLNaPRSgcBe1oAjsTuCWj-O0xoDVi6C0OuyS6tWXjv8TvUEBGw/exec";
+            
+            const timestamp = document.getElementById("timestamp");
+            const submitBtn = document.getElementById("submitBtn");
+            const msg = document.getElementById("msg");
+            const forms = document.getElementById("contactForm");
+            
+            timestamp.value = getFormattedDateTime();
+            setInterval(() => {
+                timestamp.value = getFormattedDateTime();
+            }, 60000);
+            
+            forms.addEventListener("submit", (e) => {
+                e.preventDefault();
+                submitBtn.innerHTML = "Submitting...";
+                timestamp.values = getFormattedDateTime();
+                const formData = new FormData(forms);
+                fetch(url, {
+                    method: "POST",
+                    body: formData,
+                })
+                    .then((res) => res.text())
+                    .then((finalres) => {
+                        submitBtn.innerText = "Submit";
+                        msg.classList.remove('alertMsg');
+                        msg.classList.add('popupGreen');
+                        msg.innerText = finalres;
+                        forms.querySelectorAll("input, textarea").forEach((input) => {
+                            if (input.type !== 'datetime-local') {
+                                input.value = "";
+                            }
+                        });
+                        setTimeout(() => {
+                            msg.innerText = "";
+                            msg.classList.remove('popupGreen');
+                        }, 5000);
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        submitBtn.innerText = "Submit";
+                        msg.classList.add('alertMsg');
+                        msg.innerText = "Failed to send data. Please try again.";
+                    });
+            });
+        })
+
+    </script>
 </body>
 
 </html>
