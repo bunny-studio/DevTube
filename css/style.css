@@ -506,6 +506,9 @@ main {
     margin: 20px 0;
 }
 
+.about-container {
+    height: auto !important;
+}
 
 .contact-container,
 .about-container {
@@ -522,10 +525,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
+    width: auto;
 }
 
 .letsTalkBtn {
@@ -562,18 +563,6 @@ main {
     transform: translateY(-0.2em);
 }
 
-.contactForm {
-    align-items: center;
-    background-color: var(--primary-text);
-    color: var(--heading-text-color);
-    padding: 20px;
-    border-radius: 20px;
-    width: 600px;
-    height: auto;
-    position: relative;
-    box-shadow: 0px 10px 30px 2px var(--fa-primary-color);
-}
-
 /* .about-container .heading>h1 {
     margin: 80px 0 0;
 } */
@@ -585,14 +574,19 @@ main {
 }
 
 .image-container img {
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 10px 10px 10px var(--fa-primary-color);
 }
 
 .about-container .text-container {
-    width: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: auto;
     margin: 20px;
     padding: 10px;
@@ -618,6 +612,23 @@ main {
 .about-container .text-container .brandName>a:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+.contactForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--primary-text);
+    color: var(--heading-text-color);
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: 0px 10px 30px 2px var(--fa-primary-color);
 }
 
 
