@@ -105,8 +105,8 @@ body {
 header {
     display: flex;
     top: 0;
-    position: fixed;
-    /* position: sticky !important; */
+    /* position: fixed; */
+    position: sticky;
     justify-content: center;
     align-items: center;
     height: 80px;
@@ -206,7 +206,7 @@ main {
     align-items: center;
     width: 100%;
     min-height: 90vh;
-    height: 100%;
+    height: auto;
 }
 
 .home {
@@ -490,6 +490,7 @@ main {
 }
 
 /* About us & Contact us Styling */
+
 .popupGreen {
     background-color: var(--msg-color-two);
     padding: 20px;
@@ -512,10 +513,8 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     width: 100%;
-    height: 92vh;
-    background-color: #ccc;
+    height: calc(100vh - 160px);
     color: var(--heading-text-color);
 }
 
@@ -525,6 +524,8 @@ main {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .letsTalkBtn {
@@ -541,7 +542,7 @@ main {
 }
 
 .letsTalks {
-    display: block;
+    display: inline-block;
     box-sizing: border-box;
     border: 2px solid var(--fa-primary-color);
     border-radius: 5px;
@@ -573,9 +574,9 @@ main {
     box-shadow: 0px 10px 30px 2px var(--fa-primary-color);
 }
 
-.about-container h1 {
+/* .about-container .heading>h1 {
     margin: 80px 0 0;
-}
+} */
 
 .about-container h1,
 .contactForm h1 {

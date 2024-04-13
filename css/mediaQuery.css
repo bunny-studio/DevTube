@@ -62,6 +62,18 @@
         margin: 20px 0;
         padding: 10px;
     }
+
+    /* About us & Contact us Styling */
+
+    .contact-container,
+    .about-container {
+        height: max-content;
+    }
+
+    .info{
+        max-width: 800px;
+        width: 100%;
+    }
 }
 
 @media (max-width:600px) {
@@ -159,8 +171,8 @@
 }
 
 @media (max-width:360px) {
-    
-    
+
+
     .content .video-container>iframe,
     .content .category .video-container {
         width: 290px;
