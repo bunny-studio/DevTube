@@ -214,11 +214,11 @@ form.onchange = function (e) {
                     <div class="video-content-cont">
                         <div class="video-container">
                             <div class="video-category">
-                                <h2>Data Structure & Algorithms</h2>
+                                <h2>Data Structure & Algorithms using JAVA</h2>
                             </div>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/CBYHwZcbD-s?si=buFFkepiMlai8XU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             <div class="video-title">
-                                <h3>Data Structure & Algorithms Beginner to Professional by <a class="credits"
+                                <h3>Data Structure & Algorithms using JAVA Beginner to Professional by <a class="credits"
                                         href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
                             </div>
                         </div>
@@ -489,42 +489,91 @@ form.onchange = function (e) {
                       <hr>
                       <div class="video-content-cont">
                           <div class="video-container">
-                              <div class="video-category">
-                                  <h2>C Language</h2>
-                              </div>
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/ZSPZob_1TOk?si=bCFXjdTHorPNyIJO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                              <div class="video-title">
-                                <h3>C language For Beginners by <a class="credits"
-                                        href="https://www.youtube.com/@CodeWithHarry" target="_blank">CodeWithHarry</a>
-                                </h3>
+                                <div class="video-category">
+                                    <h2>C Language</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZSPZob_1TOk?si=bCFXjdTHorPNyIJO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <div class="video-title">
+                                  <h3>C language For Beginners by <a class="credits" href="https://www.youtube.com/@CodeWithHarry" target="_blank">CodeWithHarry</a>
+                                  </h3>
+                                </div>
                             </div>
-                          </div>
-                          <div class="video-container">
-                              <div class="video-category">
-                                  <h2>C++ Language</h2>
-                              </div>
-                              <div class="coming-up-text">
-                                <h2>Coming Soon....</h2>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>C++ Language</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/e7sAf4SbS_g?si=P9OTOZ4sZJyTmGoP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>C++ language For Beginners by <a class="credits" href="https://www.youtube.com/@CollegeWallahbyPW" target="_blank">College Wallah</a></h3>
+                                </div>
                             </div>
-                          </div>
-                          <div class="video-container">
-                              <div class="video-category">
-                                  <h2>Java Language</h2>
-                              </div>
-                              <div class="coming-up-text">
-                                <h2>Coming Soon....</h2>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>C# Language</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/SuLiu5AK9Ps?si=udxTtOkdEhMUKfJu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>C# language For Beginners by <a class="credits" href="https://www.youtube.com/@CodeWithHarry" target="_blank">CodeWithHarry</a></h3>
+                                </div>
                             </div>
-                          </div>
-                      </div>
-                      <div class="video-content-cont">
-                          <div class="video-container">
-                              <div class="video-category">
-                                  <h2>Python</h2>
-                              </div>
-                              <div class="coming-up-text">
-                                <h2>Coming Soon....</h2>
+                        </div>
+                        <div class="video-content-cont">
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>C# Game Development on Unity</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/IjqN3GvQSy8?si=6Kbp6vQnX-m6iB-J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>C# Game Development on Unity For Beginners by <a class="credits" href="https://www.youtube.com/@tecnezo" target="_blank">Tecenzo</a></h3>
+                                </div>
                             </div>
-                          </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>Data Structure & Algorithms using C/C++</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/OkS9YkfW50s?si=C9p3lim70F2zsyiu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>DSA using C/C++ For Beginners by <a class="credits" href="https://www.youtube.com/@codingseekho" target="_blank">CoDing SeeKho</a></h3>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>Data Structure & Algorithms using Python</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/f9Aje_cN_CY?si=O9SV-LKzuqi0-iEP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>DSA using Python For Beginners by <a class="credits" href="https://www.youtube.com/@campusx-official" target="_blank">CampusX</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-content-cont">
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>Java Language</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ECT-ehj-q7s?si=ZiFisRud5NPx3tAh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                      <h3>JAVA language For Beginners by <a class="credits" href="https://www.youtube.com/@JTCINDIA" target="_blank">JTC INDIA</a></h3>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>Java Language</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/32DLasxoOiM?si=kkS7nATXsu2KzVyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                      <h3>JAVA language For Beginners by <a class="credits" href="https://www.youtube.com/@codingseekho" target="_blank">CoDing SeeKho</a></h3>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>Python</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ERCMXc8x7mc?si=vfyVDMIpwH9Q_b6m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>Python language For Beginners by <a class="credits" href="https://www.youtube.com/@ApnaCollegeOfficial" target="_blank">Apna College</a></h3>
+                                </div>
+                            </div>
                       </div>
                   </div>
               </div>`;

@@ -10,7 +10,7 @@ function popupMsg() {
 
   window.addEventListener("scroll", function () {
     if (popupContainer.style.display !== "none") {
-      var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      var scrolled = window.pageYOffset || document.documentElement.scrollIntoView;
       popupContainer.style.top = scrolled + 90 + "px";
     }
   });
