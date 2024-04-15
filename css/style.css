@@ -573,12 +573,17 @@ main {
     font-size: 48px;
 }
 
+.image-container img:hover {
+    filter: brightness(90%);
+    box-shadow: 10px 10px 10px var(--fa-primary-color);
+}
+
 .image-container img {
+    transition: 0.3s all ease-in-out;
     max-width: 400px;
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px var(--fa-primary-color);
 }
 
 .about-container .text-container {
