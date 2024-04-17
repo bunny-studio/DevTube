@@ -399,8 +399,11 @@ form.onchange = function (e) {
                             <div class="video-category">
                                 <h2>Vue.js</h2>
                             </div>
-                            <div class="coming-up-text">
-                                <h2>Coming Soon....</h2>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FXpIoQ_rT_c?si=DsvGlx8a0aU1Z2li" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Vue.js For Beginners by <a class="credits"
+                                    href="https://www.youtube.com/@freecodecamp.org" target="_blank">FreeCodeCamp.org</a>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -582,42 +585,94 @@ form.onchange = function (e) {
     function showFrontendContent() {
       videoContainer.style.display = "block";
       videoContainer.innerHTML = `<div class="note">
-                <h3>These all videos are available only in <span>Hindi Language</span></h3>
-              </div>
-              <div class="video-cat">
-                  <div class="category show" id="webDevCatHindi">
-                      <div class="heading-text">
-                          <h2>Front-End Development</h2>
-                      </div>
-                      <hr>
-                      <div class="video-content-cont">
-                          <div class="video-container">
-                              <div class="video-category">
-                                  <h2>HTML, CSS</h2>
-                              </div>
-                              <div class="coming-up-text">
-                                <h2>Coming Soon....</h2>
-                             </div>
+                    <h3>These all videos are available only in <span>Hindi Language</span></h3>
+                </div>
+                <div class="video-cat">
+                    <div class="category show" id="webDevCatHindi">
+                        <div class="heading-text">
+                            <h2>Front-End Development</h2>
+                        </div>
+                        <hr>
+                        <div class="video-content-cont">
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>HTML</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/HcOc7P5BMi4?si=jez_nOOVANJ0gabt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>HTML language For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@ApnaCollegeOfficial" target="_blank">Apna College</a></h3>
+                                </div>
                             </div>
-                          <div class="video-container">
-                              <div class="video-category">
-                                  <h2>SASS</h2>
-                              </div>
-                              <div class="coming-up-text">
-                                <h2>Coming Soon....</h2>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>CSS</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ESnrn1kAD4E?si=TjMWxwASRMybEm7X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>CSS For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@ApnaCollegeOfficial" target="_blank">Apna College</a></h3>
+                                </div>
                             </div>
-                          </div>
-                          <div class="video-container">
-                              <div class="video-category">
-                                  <h2>Javascript</h2>
-                              </div>
-                              <div class="coming-up-text">
-                                <h2>Coming Soon....</h2>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>SASS</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/tEQOdFgUXI4?si=T2a8d7Qy7tXpMSoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>CSS For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@ThapaTechnical" target="_blank">Thapa Technical</a></h3>
+                                </div>
                             </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>`;
+                        </div>
+                        <div class="video-content-cont">
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>Javascript</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/13gLB6hDHR8?si=vvlmwyac1KVxIpED" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>CSS For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@ThapaTechnical" target="_blank">Thapa Technical</a></h3>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>React.JS</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/eILUmCJhl64?si=_FZTuMF1Bdw6pgNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>React.JS For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@KG_Coding" target="_blank">KG Coding by Prashant Sir</a></h3>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>Typescript</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/66_bET6sI20?si=-Dn3_LOAyDMSSBf9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>Typescript For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@6PackProgrammer" target="_blank">6 Pack Programmer</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-content-cont">
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>Angular.JS</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/0LhBvp8qpro?si=y-zEZpwwdh4OIMxT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>Angular.JS For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@codewithharry" target="_blank">CodeWithHarry</a></h3>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>Vue.JS</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/0xt_Jv-P_Vo?si=Uj2XQrNoNd7LMgut" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>Vue.JS For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@codestepbystep" target="_blank">Code Step By Step</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
     }
   } else {
     catButtons.style.display = "none";
