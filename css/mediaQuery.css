@@ -78,6 +78,10 @@
         overflow-x: hidden !important;
     }
 
+    header{
+        position: fixed;
+    }
+
     header nav ul {
         width: 45%;
     }
@@ -140,6 +144,10 @@
 
 @media (max-width:400px) and (orientation: portrait) {
 
+    .ppop .popup {
+       width: 355px;
+    }
+    
     .content .video-container>iframe,
     .content .category .video-container {
         width: 340px;
@@ -169,6 +177,10 @@
 }
 
 @media (max-width:360px) {
+
+    .ppop .popup {
+        width: 300px;
+     }
 
     .content .video-container>iframe,
     .content .category .video-container {
