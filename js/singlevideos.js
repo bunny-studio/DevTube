@@ -3,6 +3,7 @@ const videoContainer = document.getElementById("single-video");
 const contSelection = document.getElementById("cont-selection");
 const videoCat = document.getElementById("select-cat");
 const catButtons = document.getElementById("cat-button");
+const alertMsg = document.getElementById("alertMsg");
 
 let isContentVisible = false;
 // var videoCatvalue = videoCat.value;
@@ -49,23 +50,25 @@ form.onchange = function (e) {
     document.getElementById(
       "main-content-type"
     ).innerHTML = `<button class="btns" id="frontend">Front-End Developement</button>
-          <button class="btns" id="backend" onclick="popupMsg()">Back-End Development</button>`;
+          <button class="btns" id="backend">Back-End Development</button>`;
     videoContainer.style.display = "none";
     const frontend = document.getElementById("frontend");
     frontend.addEventListener("click", showFrontendContent);
     frontend.scrollIntoView();
+    const backend = document.getElementById("backend");
+    backend.addEventListener("click", showBackendContent);
+    backend.scrollIntoView();
     const videoCat = document.getElementById("video-cat");
     videoCat.scrollIntoView();
 
-    const backend = document.getElementById("backend");
-    backend.addEventListener("click", popupMsg);
-    backend.scrollIntoView();
   }
 
   if (opt === "english") {
     catButtons.style.display = "block";
     videoContainer.style.display = "none";
     contSelection.innerHTML = "";
+    alertMsg.innerHTML =
+      "<span>New Content Added in Hindi Language Also.</span>";
     //   console.log("English");
 
     function showUiuxContent() {
@@ -410,10 +413,103 @@ form.onchange = function (e) {
                 </div>
             </div>`;
     }
+
+    function showBackendContent() {
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+              <h3>These all videos are available only in <span>English Language</span></h3>
+            </div>
+            <div class="video-cat">
+                <div class="category show" id="webDevCatEng">
+                    <div class="heading-text">
+                        <h2>Back-End Development</h2>
+                    </div>
+                    <hr>
+                    <div class="video-content-cont">
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>Node.JS & Express.JS</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Oe421EPjeBE?si=fWqdCI867b_-2aTr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Node.js & Express.js From Beginner to Professional by <a class="credits" href="https://www.youtube.com/@freecodecamp" target="_blank">FreeCodeCamp.org</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>PHP</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/zZ6vybT1HQs?si=lktA7ClsszH5ue1_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>PHP From Beginner to Professional by <a class="credits" href="https://www.youtube.com/@brocode" target="_blank">Bro Code</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>Laravel for PHP</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ImtZ5yENzgE?si=9zHmCQPEx4ngzUAH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Laravel for PHP From Beginner to Professional by <a class="credits" href="https://www.youtube.com/@freecodecamp" target="_blank">FreeCodeCamp.org</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-content-cont">
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>Spring for JAVA</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Jl9OKQ92SJU?si=Tx_hrFCVoho5Pkdj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Spring for JAVA From Beginner to Professional by <a class="credits" href="https://www.youtube.com/@Telusko" target="_blank">Telusko</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>Ruby</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/t_ispmWmdjY?si=r7s2WvIz-R_eMMt3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Ruby From Beginner to Professional by <a class="credits" href="https://www.youtube.com/@" target="_blankfreecodecamp">FreeCodeCamp.org</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>Ruby on Rails</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fmyvWz5TUWg?si=IFlK09Jmn4qXyqTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Ruby on Rails For Beginners by <a class="credits" href="https://www.youtube.com/@freecodecamp" target="_blank">FreeCodeCamp.org</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-content-cont">
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>ASP.Net for C#</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/kdPtNMb8tPw?si=iW4SCbPLWelwfUPj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>ASP.Net for C# For Beginners by <a class="credits" href="https://www.youtube.com/@Intellipaat" target="_blank">Intellipaat</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+    }
   } else if (opt === "hindi") {
     catButtons.style.display = "block";
     videoContainer.style.display = "none";
     contSelection.innerHTML = "";
+    alertMsg.innerHTML =
+      "<span>New Content Added in English Language Also.</span>";
     // console.log("Hindi");
 
     function showUiuxContent() {
@@ -674,10 +770,36 @@ form.onchange = function (e) {
                     </div>
                 </div>`;
     }
+
+    function showBackendContent() {
+        videoContainer.style.display = "block";
+        videoContainer.innerHTML = `<div class="note">
+                <h3>These all videos are available only in <span>Hindi Language</span></h3>
+              </div>
+              <div class="video-cat">
+                  <div class="category show" id="webDevCatEng">
+                      <div class="heading-text">
+                          <h2>Back-End Development</h2>
+                      </div>
+                      <hr>
+                      <div class="video-content-cont">
+                          <div class="video-container ">
+                              <div class="video-category">
+                                  <h2>Nothing Available Currently!</h2>
+                              </div>
+                              <div class="coming-up-text">
+                                <h2>Video Not Available In Hindi Currently. <br>Please, Come Back Later!</h2>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>`;
+      }
   } else {
     catButtons.style.display = "none";
     videoContainer.style.display = "none";
     contSelection.innerHTML = "";
-    console.log("Select Language");
+    alertMsg.innerHTML = "";
+    // console.log("Select Language");
   }
 };
