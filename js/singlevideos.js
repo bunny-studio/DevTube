@@ -60,7 +60,6 @@ form.onchange = function (e) {
     backend.scrollIntoView();
     const videoCat = document.getElementById("video-cat");
     videoCat.scrollIntoView();
-
   }
 
   if (opt === "english") {
@@ -772,29 +771,48 @@ form.onchange = function (e) {
     }
 
     function showBackendContent() {
-        videoContainer.style.display = "block";
-        videoContainer.innerHTML = `<div class="note">
-                <h3>These all videos are available only in <span>Hindi Language</span></h3>
-              </div>
-              <div class="video-cat">
-                  <div class="category show" id="webDevCatEng">
-                      <div class="heading-text">
-                          <h2>Back-End Development</h2>
-                      </div>
-                      <hr>
-                      <div class="video-content-cont">
-                          <div class="video-container ">
-                              <div class="video-category">
-                                  <h2>Nothing Available Currently!</h2>
-                              </div>
-                              <div class="coming-up-text">
-                                <h2>Video Not Available In Hindi Currently. <br>Please, Come Back Later!</h2>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>`;
-      }
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+                    <h3>These all videos are available only in <span>Hindi Language</span></h3>
+                </div>
+                <div class="video-cat">
+                    <div class="category show" id="webDevCatEng">
+                        <div class="heading-text">
+                            <h2>Back-End Development</h2>
+                        </div>
+                        <hr>
+                        <div class="video-content-cont">
+                            <div class="video-container ">
+                                <div class="video-category">
+                                    <h2>Node.JS/ Express.JS/ MongoDB</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ChVE-JbtYbM?si=XIQXld2yaJS4hNjk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>Node.JS For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@coderdost" target="_blank">Coder Dost</a></h3>
+                                </div>
+                            </div>
+                            <div class="video-container ">
+                                <div class="video-category">
+                                    <h2>PHP</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/1SnPKhCdlsU?si=kMziP5LJipoj-Pn_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>PHP For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@codewithharry" target="_blank">CodeWithHarry</a></h3>
+                                </div>
+                            </div>
+                            <div class="video-container ">
+                                <div class="video-category">
+                                    <h2>Laravel PHP</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/xIApzP4mWyA?si=3y75_I741C9PIEW2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>PHP For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@wscubetech" target="_blank">WsCube Tech</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+    }
   } else {
     catButtons.style.display = "none";
     videoContainer.style.display = "none";
