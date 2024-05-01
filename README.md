@@ -62,8 +62,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-// Versus Studio - [@Versus-Studio](https://www.instagram.com/versus_studio.vs)
-
 Project Link: [https://versus-studio.github.io/DevTube/](https://versus-studio.github.io/DevTube/)
 
 ##
