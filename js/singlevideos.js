@@ -66,8 +66,8 @@ form.onchange = function (e) {
     catButtons.style.display = "block";
     videoContainer.style.display = "none";
     contSelection.innerHTML = "";
-    alertMsg.innerHTML =
-      "<span>New Content Added in Hindi Language Also.</span>";
+    // alertMsg.innerHTML =
+    //   "<span>New Content Added in Hindi Language Also.</span>";
     //   console.log("English");
 
     function showUiuxContent() {
@@ -507,8 +507,8 @@ form.onchange = function (e) {
     catButtons.style.display = "block";
     videoContainer.style.display = "none";
     contSelection.innerHTML = "";
-    alertMsg.innerHTML =
-      "<span>New Content Added in English Language Also.</span>";
+    // alertMsg.innerHTML =
+    //   "<span>New Content Added in English Language Also.</span>";
     // console.log("Hindi");
 
     function showUiuxContent() {
