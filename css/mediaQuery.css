@@ -118,6 +118,8 @@
     .content .video-container>iframe,
     .content .category .video-container {
         border-radius: 10px;
+        padding: 0 10px;
+        margin: 0 -10px;
         transition: 0.2s ease;
         width: 400px;
     }

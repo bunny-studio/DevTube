@@ -430,10 +430,12 @@ main {
 }
 
 .content .video-container{
-    max-width: 550px;
+    max-width: min-content;
     width: 100%;
     min-height: 450px;
     height: 100%;
+    background-color: var(--header-footer-bg);
+    padding: 0 10px;
 }
 
 .content .video-container>iframe,
@@ -472,12 +474,12 @@ main {
     width: 100%;
     height: max-content;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 10px;
     padding: 20px;
 }
 
 .content .video-category>h2 {
-    font-size: 34px;
+    font-size: 30px;
     text-align: left !important;
     margin: 10px 0;
     text-decoration: underline;
@@ -493,14 +495,14 @@ main {
 }
 
 .content .video-title>h3>.credits {
-    color: var(--body-bg);
+    color: var(--fa-primary-color);
     text-decoration: none;
     transition: .1s all ease-in-out;
 }
 
 .content .video-title>h3>.credits:hover {
     text-decoration: underline;
-    text-shadow: 5px 5px 5px var(--primary-text);
+    text-shadow: 5px 5px 5px var(--fade-text-color);
 }
 
 /* About us & Contact us Styling */
