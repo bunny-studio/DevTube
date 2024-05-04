@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--poppins-sans);
     outline: none;
 }
 
@@ -30,20 +30,31 @@ html {
 }
 
 :root {
+    /* Colors-Scheme */
     --fa-primary-color: #7a08af;
     --header-footer-bg: #FFFFFC;
     --common-text-color: #030303;
     --fade-text-color: #afadad;
+    --fade-text-color-two: #5e5e5e;
+    --fade-border-color: #ccc;
     --heading-text-color: #3c3c3c;
     --primary-text: #fefefe;
+    --bg-color: #0d1117;
     --body-bg: #f5f3f3;
     --msg-color-one: #FF1B1C;
     --msg-color-two: #0fec0f;
     --text-color-two: #FF7F11;
     --alert-msg-bright-color: #f9ce34;
+    --highlight-color: #d29922;
+    --highlight-bg-color: #bb800926;
     --svg-color: #81689D;
     --linear-gradient-color: linear-gradient(60deg, #f9ce34, #ee2a7b, #6228d7);
     --linear-gradient-color2: linear-gradient(60deg, #000000, #ffffffee, #ffffffee, #000000);
+    
+    /* Font-Family */
+    --poppins-sans: "Poppins", sans-serif;
+    --protest-guerrilla-sans: "Protest Guerrilla", sans-serif;
+    --raleway-sans: "Raleway", sans-serif;
 }
 
 body {
@@ -225,15 +236,15 @@ main {
 
 .home .cont h2 {
     font-size: 110px;
-    font-family: "Protest Guerrilla", sans-serif;
-    font-family: 400;
+    font-family: var(--protest-guerrilla-sans);
+    font-weight: 400;
     font-style: normal;
     margin: 0 0 20px;
 }
 
 .home .cont p {
     font-size: 22px;
-    font-family: "Raleway", sans-serif;
+    font-family: var(--raleway-sans);
     font-weight: 500;
     margin: 0 0 40px;
 }
@@ -311,7 +322,7 @@ main {
     outline: none;
     height: max-content;
     border: 2px solid transparent;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--poppins-sans);
     font-size: 18px;
     font-weight: 500;
 }
@@ -366,7 +377,7 @@ main {
     height: auto;
     text-align: center;
     font-size: 18px;
-    font-family: "Raleway", sans-serif;
+    font-family: var(--raleway-sans);
     font-weight: 500;
 }
 
@@ -391,7 +402,7 @@ main {
 .content .alert-mesg,
 .content .alert-msg span {
     font-weight: 600;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--poppins-sans);
     background-color: var(--alert-msg-bright-color);
     padding: 5px;
     border-radius: 2px;
@@ -438,6 +449,10 @@ main {
     padding: 0 10px;
 }
 
+.content .video-container>iframe{
+    background-color: var(--common-text-color);
+}
+
 .content .video-container>iframe,
 .content .category .video-container {
     border-radius: 10px;
@@ -459,7 +474,7 @@ main {
     height: auto;
     padding: 0 100px;
     border-radius: 10px;
-    font-family: "Protest Guerrilla", sans-serif;
+    font-family: var(--protest-guerrilla-sans);
 }
 
 .content .video-container>iframe:hover {
@@ -483,7 +498,7 @@ main {
     text-align: left !important;
     margin: 10px 0;
     text-decoration: underline;
-    font-family: "Protest Guerrilla", sans-serif;
+    font-family: var(--protest-guerrilla-sans);
 }
 
 .heading-text>h2 {
@@ -491,7 +506,7 @@ main {
     font-size: 72px;
     margin: 10px 0;
     text-align: center;
-    font-family: "Protest Guerrilla", sans-serif;
+    font-family: var(--protest-guerrilla-sans);
 }
 
 .content .video-title>h3>.credits {
@@ -612,7 +627,7 @@ main {
     margin: 20px;
     padding: 10px;
     border-radius: 3px;
-    background-color: #0d1117;
+    background-color: var(--bg-color);
     color: var(--primary-text);
 }
 
@@ -624,8 +639,8 @@ main {
 .about-container .text-container .brandName>a {
     text-decoration: none;
     width: max-content;
-    color: #d29922;
-    background-color: #bb800926;
+    color: var(--highlight-color);
+    background-color: var(--highlight-bg-color);
     border-radius: 2px;
     padding: 2px;
 }
@@ -655,7 +670,7 @@ main {
 
 .contactForm .msg {
     margin: 10px;
-    color: rgb(13, 184, 13);
+    color: var(--msg-color-two);
 }
 
 .contactForm .row {
@@ -676,7 +691,7 @@ main {
 }
 
 .contactForm .row .input-fields label {
-    color: #5e5e5e;
+    color: var(--fade-text-color-two);
     position: absolute;
     top: 18px;
     left: 10px;
@@ -687,7 +702,7 @@ main {
     width: 100%;
     height: auto;
     padding: 15px 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--fade-border-color);
     outline: none;
     border-radius: 5px;
     position: relative;
@@ -696,12 +711,12 @@ main {
 
 .contactForm .row .input-fields textarea:not(:valid)~label,
 .contactForm .row .input-fields input:not(:valid)~label {
-    color: rgb(212, 10, 10);
+    color: var(--msg-color-one);
 }
 
 .contactForm .row .input-fields textarea:valid~label,
 .contactForm .row .input-fields input:valid~label {
-    color: rgb(3, 206, 3);
+    color: var(--msg-color-two);
 }
 
 .contactForm .row .input-fields textarea:valid~label,
@@ -711,7 +726,7 @@ main {
     top: -12px;
     left: 10px;
     font-size: 14px;
-    background-color: #fefefe;
+    background-color: var(--primary-text);
     padding: 5px;
     transition: 0.3s ease;
 }
@@ -724,36 +739,36 @@ main {
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 5px;
-    color: #fefefe;
+    color: var(--primary-text);
     transition: 0.3s all ease;
 }
 
 .contactForm .addBtn {
-    color: #3c3c3c;
-    background-color: aliceblue;
+    color: var(--heading-text-color);
+    background-color: var(--header-footer-bg);
     padding: 10px 20px;
-    border: 2px solid #3c3c3c;
+    border: 2px solid var(--heading-text-color);
     border-radius: 5px;
 }
 
 .contactForm .row button[type="submit"] {
-    background-color: rgb(13, 184, 13);
+    background-color: var(--msg-color-two);
 }
 
 .contactForm .row button[type="submit"]:hover {
     background-color: transparent;
-    border: 2px solid rgb(13, 184, 13);
-    color: rgb(13, 184, 13);
+    border: 2px solid var(--msg-color-two);
+    color: var(--msg-color-two);
 }
 
 .contactForm .row button[type="reset"] {
-    background-color: rgb(212, 10, 10);
+    background-color: var(--msg-color-one);
 }
 
 .contactForm .row button[type="reset"]:hover {
     background-color: transparent;
-    border: 2px solid rgb(212, 10, 10);
-    color: rgb(212, 10, 10);
+    border: 2px solid var(--msg-color-one);
+    color: var(--msg-color-one);
 }
 
 /* Footer */
@@ -770,7 +785,7 @@ footer {
 
 footer .social-links>h3 {
     font-size: 18px;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--poppins-sans);
 }
 
 footer .social-links>a {
