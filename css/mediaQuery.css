@@ -115,11 +115,12 @@
         gap: 10px;
     }
 
-    .content .video-container>iframe,
+    .content .video-container>iframe{
+        width: 380px;
+    }
     .content .category .video-container {
         border-radius: 10px;
         padding: 0 10px;
-        margin: 0 -10px;
         transition: 0.2s ease;
         width: 400px;
     }
@@ -152,7 +153,7 @@
     
     .content .video-container>iframe,
     .content .category .video-container {
-        width: 340px;
+        width: min-content;
     }
 
     .content .heading-text .otherlang {
@@ -184,9 +185,11 @@
         width: 300px;
      }
 
-    .content .video-container>iframe,
+    .content .video-container>iframe{
+        width: 280px;
+    }
     .content .category .video-container {
-        width: 290px;
+        width: 300px;
     }
 
     .content .heading-text .otherlang {
