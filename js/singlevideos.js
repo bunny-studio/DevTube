@@ -231,7 +231,7 @@ form.onchange = function (e) {
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/B31LgI4Y4DQ?si=AjsbM-GLlFkhJ1qB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="video-title">
                                 <h3>Data Structure using C & C++ Beginner to Professional by <a class="credits"
-                                        href="https://www.youtube.com/@freecodecamp.org" target="_blank">freecodecamp.org</a></h3>
+                                        href="https://www.youtube.com/@freecodecamp" target="_blank">FreeCodeCamp.org</a></h3>
                             </div>
                         </div>
                         <div class="video-container">
@@ -241,7 +241,7 @@ form.onchange = function (e) {
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/pkYVOmU3MgA?si=7lGAobBPNmYT0tgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="video-title">
                                 <h3>Data Structure using Python Beginner to Professional by <a class="credits"
-                                        href="https://www.youtube.com/@freecodecamp.org" target="_blank">freecodecamp.org</a></h3>
+                                        href="https://www.youtube.com/@freecodecamp" target="_blank">FreeCodeCamp.org</a></h3>
                             </div>
                         </div>
                     </div>
@@ -404,7 +404,7 @@ form.onchange = function (e) {
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/FXpIoQ_rT_c?si=DsvGlx8a0aU1Z2li" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="video-title">
                                 <h3>Vue.js For Beginners by <a class="credits"
-                                    href="https://www.youtube.com/@freecodecamp.org" target="_blank">FreeCodeCamp.org</a>
+                                    href="https://www.youtube.com/@freecodecamp" target="_blank">FreeCodeCamp.org</a>
                                 </h3>
                             </div>
                         </div>
@@ -473,7 +473,7 @@ form.onchange = function (e) {
                             </div>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/t_ispmWmdjY?si=r7s2WvIz-R_eMMt3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="video-title">
-                                <h3>Ruby From Beginner to Professional by <a class="credits" href="https://www.youtube.com/@" target="_blankfreecodecamp">FreeCodeCamp.org</a>
+                                <h3>Ruby From Beginner to Professional by <a class="credits" href="https://www.youtube.com/@freecodecamp" target="_blank">FreeCodeCamp.org</a>
                                 </h3>
                             </div>
                         </div>
