@@ -62,6 +62,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Project Link: [https://Bunny-studio.github.io/DevTube/](https://Bunny-studio.github.io/DevTube/)
+Project Link: [https://bunny-studio.github.io/DevTube/](https://bunny-studio.github.io/DevTube/)
 
 ##
