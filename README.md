@@ -54,7 +54,7 @@ DevTube is always looking to expand its collection of tutorials and educational 
 
 ## Feedback
 
-Your feedback is invaluable to us. If you have any suggestions on how we can improve DevTube, or if you want to recommend additional content, please email us at [Bunnystudio.vs@gmail.com](mailto:Bunnystudio.vs@gmail.com).
+Your feedback is invaluable to us. If you have any suggestions on how we can improve DevTube, or if you want to recommend additional content, please email us at [BunnyStudio.vs@gmail.com](mailto:Bunnystudio.vs@gmail.com).
 
 ## License
 
