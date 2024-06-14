@@ -1,6 +1,6 @@
-# Versus Studio - DevTube
+# Bunny Studio - DevTube
 
-Welcome to the official repository of **DevTube** by Versus Studio, a curated educational platform designed to streamline the learning process for developers of all levels. DevTube aggregates top-tier programming tutorials from YouTube, categorizing them into an easily navigable format, so you can spend less time searching and more time learning. From web development frameworks like React.js and Vue.js to programming fundamentals in C, Java, and Python, we've got you covered. Dive into UI/UX design, learn the ins and outs of DSA, or master AppScript at your own pace. 
+Welcome to the official repository of **DevTube** by Bunny Studio, a curated educational platform designed to streamline the learning process for developers of all levels. DevTube aggregates top-tier programming tutorials from YouTube, categorizing them into an easily navigable format, so you can spend less time searching and more time learning. From web development frameworks like React.js and Vue.js to programming fundamentals in C, Java, and Python, we've got you covered. Dive into UI/UX design, learn the ins and outs of DSA, or master AppScript at your own pace. 
 
 ## Table of Contents
 
@@ -40,7 +40,7 @@ Each category is meticulously organized to ensure you find exactly what you need
 
 ## Getting Started
 
-To start learning with DevTube, simply navigate to [Versus Studio - DevTube](https://versus-studio.github.io/DevTube/). No sign-up or installation required—just pick your desired programming language or technology and start watching.
+To start learning with DevTube, simply navigate to [Bunny Studio - DevTube](https://Bunny-studio.github.io/DevTube/). No sign-up or installation required—just pick your desired programming language or technology and start watching.
 
 ## Usage
 
@@ -54,7 +54,7 @@ DevTube is always looking to expand its collection of tutorials and educational 
 
 ## Feedback
 
-Your feedback is invaluable to us. If you have any suggestions on how we can improve DevTube, or if you want to recommend additional content, please email us at [versusstudio.vs@gmail.com](mailto:versusstudio.vs@gmail.com).
+Your feedback is invaluable to us. If you have any suggestions on how we can improve DevTube, or if you want to recommend additional content, please email us at [BunnyStudio.vs@gmail.com](mailto:Bunnystudio.vs@gmail.com).
 
 ## License
 
@@ -62,6 +62,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Project Link: [https://versus-studio.github.io/DevTube/](https://versus-studio.github.io/DevTube/)
+Project Link: [https://bunny-studio.github.io/DevTube/](https://bunny-studio.github.io/DevTube/)
 
 ##
