@@ -16,8 +16,7 @@
     }
 
     header .menu-bar:hover {
-        color: var(--header-footer-bg);
-        background-color: var(--fa-primary-color);
+        color: var(--fa-primary-color);
     }
 
     #click:checked~.menu-bar i::before {
