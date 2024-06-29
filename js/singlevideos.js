@@ -139,7 +139,7 @@ form.onchange = function (e) {
                             </div>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=ShSVOOaiye8GxWjE&amp;list=PLjiHFwhbHYlEmPhn68XdG2p2k4X47XR-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="video-title">
-                                <h3>Figma <br> For Beginner to Professional by <a class="credits" href="https://www.youtube.com/@DesignWithArash" target="_blank">DesignWithArash</a></h3>
+                                <h3>Figma For Beginner to Professional by <a class="credits" href="https://www.youtube.com/@DesignWithArash" target="_blank">DesignWithArash</a></h3>
                                 <details>
                                     <summary>
                                         <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -156,7 +156,7 @@ form.onchange = function (e) {
                             </div>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=scBOJY9naiZLRYxU&amp;list=PLjiHFwhbHYlHSpAflJwjsKAyMaMhASm0F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="video-title">
-                                <h3>Adobe Xd UI/UX Design Course <br> For Beginner to Professional by <a class="credits" href="https://www.youtube.com/@DesignWithArash" target="_blank">DesignWithArash</a></h3>
+                                <h3>UI/UX Design Course For Beginner to Professional by <a class="credits" href="https://www.youtube.com/@DesignWithArash" target="_blank">DesignWithArash</a></h3>
                                 <details>
                                     <summary>
                                         <i class="fa-solid fa-ellipsis-vertical"></i>
