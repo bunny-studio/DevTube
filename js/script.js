@@ -54,7 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
         msg.classList.add("alertMsg");
         msg.innerText = "Failed to send data. Please try again.";
       });
-  });ZZZ
+  });
+  ZZZ;
 });
 
 function popupMsg() {

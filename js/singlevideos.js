@@ -1,4 +1,5 @@
 const singleVidButtons = document.getElementById("single-vids");
+const playlistVidBtn = document.getElementById("playlist-vids");
 const videoContainer = document.getElementById("single-video");
 const contSelection = document.getElementById("cont-selection");
 const videoCat = document.getElementById("select-cat");
@@ -21,10 +22,10 @@ form.onchange = function (e) {
                     <button class="btns" id="uiux">UI/UX Design</button>
                     <button class="btns" id="webdev">Web Development</button>
                     <button class="btns" id="others">Classic & Essential Languages</button>
-                    <button class="btns" id="appscript">App-Script (Google Sheets)</button>
-               </div>
-               <hr class="lineButton">
-               <div class="content-type two" id="main-content-type"></div>`;
+                    </div>
+                    <hr class="lineButton">
+                    <div class="content-type two" id="main-content-type"></div>`;
+      // <button class="btns" id="appscript">App-Script (Google Sheets)</button>
       const uiux = document.getElementById("uiux");
       uiux.addEventListener("click", showUiuxContent);
       uiux.scrollIntoView();
@@ -37,8 +38,41 @@ form.onchange = function (e) {
       others.addEventListener("click", showOtherLanguagesContent);
       others.scrollIntoView();
 
-      const googleSheets = document.getElementById("appscript");
-      googleSheets.addEventListener("click", showGoogleSheetsContent);
+      //   const googleSheets = document.getElementById("appscript");
+      //   googleSheets.addEventListener("click", showGoogleSheetsContent);
+    } else {
+      contSelection.innerHTML = "";
+      videoContainer.style.display = "none";
+    }
+    isContentVisible = !isContentVisible;
+  });
+
+  playlistVidBtn.addEventListener("click", () => {
+    if (isContentVisible || opt === "english" || opt === "hindi") {
+      videoContainer.style.display = "none";
+      contSelection.innerHTML = `<div class="content-type" id="content-type">
+                    <button class="btns playlist" id="uiuxplaylist">UI/UX Design</button>
+                    <button class="btns playlist" id="webdevplaylist">Web Development</button>
+                    <button class="btns playlist" id="othersplaylist">Classic & Essential Languages</button>
+                    <button class="btns playlist" id="appscriptplaylist">App-Script (Google Sheets)</button>
+               </div>
+               <hr class="lineButton">
+               <div class="content-type two" id="main-content-type"></div>`;
+      const uiux = document.getElementById("uiuxplaylist");
+      uiux.addEventListener("click", showUiuxContentPlaylist);
+      uiux.scrollIntoView();
+
+      const webdev = document.getElementById("webdevplaylist");
+      webdev.addEventListener("click", showWebDevContentPlaylist);
+      webdev.scrollIntoView();
+
+      const others = document.getElementById("othersplaylist");
+      others.addEventListener("click", showOtherLanguagesContentPlaylist);
+      others.scrollIntoView();
+
+      const googleSheets = document.getElementById("appscriptplaylist");
+      googleSheets.addEventListener("click", showGoogleSheetsContentPlaylist);
+      others.scrollIntoView();
     } else {
       contSelection.innerHTML = "";
       videoContainer.style.display = "none";
@@ -62,6 +96,22 @@ form.onchange = function (e) {
     videoCat.scrollIntoView();
   }
 
+  function showWebDevContentPlaylist() {
+    document.getElementById(
+      "main-content-type"
+    ).innerHTML = `<button class="btns playlist" id="frontend">Front-End Developement</button>
+          <button class="btns playlist" id="backend">Back-End Development</button>`;
+    videoContainer.style.display = "none";
+    const frontend = document.getElementById("frontend");
+    frontend.addEventListener("click", showFrontendContentPlaylist);
+    frontend.scrollIntoView();
+    const backend = document.getElementById("backend");
+    backend.addEventListener("click", showBackendContentPlaylist);
+    backend.scrollIntoView();
+    const videoCat = document.getElementById("video-cat");
+    videoCat.scrollIntoView();
+  }
+
   if (opt === "english") {
     catButtons.style.display = "block";
     videoContainer.style.display = "none";
@@ -69,6 +119,267 @@ form.onchange = function (e) {
     // alertMsg.innerHTML =
     //   "<span>New Content Added in Hindi Language Also.</span>";
     //   console.log("English");
+
+    function showUiuxContentPlaylist() {
+      document.getElementById("main-content-type").innerHTML = "";
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+              <h3>These playlists are available only in <span>English Language</span></h3>
+            </div>
+            <div class="video-cat" id="video-cat">
+                <div class="category show" id="uiuxDesignEng">
+                    <div class="heading-text">
+                        <h2 class="uiux">UI/UX Design</h2>
+                    </div>
+                    <hr>
+                    <div class="video-content-cont">
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>Full Figma Course</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=ShSVOOaiye8GxWjE&amp;list=PLjiHFwhbHYlEmPhn68XdG2p2k4X47XR-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Figma <br> For Beginner to Professional by <a class="credits" href="https://www.youtube.com/@DesignWithArash" target="_blank">DesignWithArash</a></h3>
+                                <details>
+                                    <summary>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </summary>
+                                    <ul>
+                                        <li><a class="credits" href="https://youtube.com/playlist?list=PLjiHFwhbHYlEmPhn68XdG2p2k4X47XR-8&si=BE7-rtu6htadRJhK" target="_blank">Full Playlist</a></li>
+                                    </ul>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>UI/UX Design</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=scBOJY9naiZLRYxU&amp;list=PLjiHFwhbHYlHSpAflJwjsKAyMaMhASm0F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Adobe Xd UI/UX Design Course <br> For Beginner to Professional by <a class="credits" href="https://www.youtube.com/@DesignWithArash" target="_blank">DesignWithArash</a></h3>
+                                <details>
+                                    <summary>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </summary>
+                                    <ul>
+                                        <li><a class="credits" href="https://youtube.com/playlist?list=PLjiHFwhbHYlHSpAflJwjsKAyMaMhASm0F&si=v7AQcZ4D9hO3O2Cc" target="_blank">Full Playlist</a></li>
+                                    </ul>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+    }
+
+    function showFrontendContentPlaylist() {
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+                  <h3>These playlists are available only in <span>English Language</span></h3>
+                </div>
+                <div class="video-cat">
+                    <div class="category show" id="webDevCatEng">
+                        <div class="heading-text">
+                            <h2>Front-End Development</h2>
+                        </div>
+                        <hr>
+                        <div class="video-content-cont">
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>Frontend Course</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=tdNXaKiZCxuKrrsc&amp;list=PLWKjhJtqVAbmMuZ3saqRIBimAKIMYkt0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>Full Frontend Course by <a class="credits" href="https://www.youtube.com/@freecodecamp" target="_blank">freeCodeCamp.org</a>
+                                    </h3>
+                                    <details>
+                                        <summary>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </summary>
+                                        <ul>
+                                            <li><a class="credits" href="https://youtube.com/playlist?list=PLWKjhJtqVAbmMuZ3saqRIBimAKIMYkt0E&si=-vd7zlfkLewUH_E3" target="_blank">Full Playlist</a></li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>HTML + CSS + Projects</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=1cfiXnrIF3HhK2ge&amp;list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>HTML, CSS & Projects for Beginners by <a class="credits"
+                                            href="https://www.youtube.com/@TraversyMedia" target="_blank">Traversy Media</a>
+                                    </h3>
+                                    <details>
+                                        <summary>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </summary>
+                                        <ul>
+                                            <li><a class="credits" href="https://youtube.com/playlist?list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU&si=aAUVPfveuZG59OZc" target="_blank">Full Playlist</a></li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>Javascript</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=YNAgbKyn1oS7VFBv&amp;list=PLsyeobzWxl7rrvgG7MLNIMSTzVCDZZcT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>Javascript From Beginner to Professional by <a class="credits"
+                                            href="https://www.youtube.com/@Telusko" target="_blank">Telusko</a>
+                                    </h3>
+                                    <details>
+                                        <summary>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </summary>
+                                        <ul>
+                                            <li><a class="credits" href="https://youtube.com/playlist?list=PLsyeobzWxl7rrvgG7MLNIMSTzVCDZZcT4&si=nL5dCMOrR7OeRiBY" target="_blank">Full Playlist</a></li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>Javascript + React.JS & More</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=nV0sZR2xEPGgDi5A&amp;list=PL9ooVrP1hQOGoYVit61V7Y1uPzfnBvN86" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>Javascript, React.JS, Angular.JS, Mernstack & More by <a class="credits"
+                                            href="https://www.youtube.com/@edurekaIN" target="_blank">Edureka!</a>
+                                    </h3>
+                                    <details>
+                                        <summary>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </summary>
+                                        <ul>
+                                            <li><a class="credits" href="https://youtube.com/playlist?list=PL9ooVrP1hQOGoYVit61V7Y1uPzfnBvN86&si=wJc_HfYTR2aZj8Ln" target="_blank">Full Playlist</a></li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>React.JS</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=uJPMZEHnYHk2eIq3&amp;list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>React.JS by <a class="credits" href="https://www.youtube.com/@Codevolution" target="_blank">Codevolution</a>
+                                    </h3>
+                                    <details>
+                                        <summary>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </summary>
+                                        <ul>
+                                            <li><a class="credits" href="https://youtube.com/playlist?list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&si=C8O26K--80Iox_a9" target="_blank">Full Playlist</a></li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>React.JS + Projects</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=zkqb2tVjuM8kVC9w&amp;list=PLWKjhJtqVAbkArDMazoARtNz1aMwNWmvC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>React.JS & Projects for Beginners by <a class="credits"
+                                            href="https://www.youtube.com/@freeCodeCamp.org" target="_blank">freeCodeCamp.org</a>
+                                    </h3>
+                                    <details>
+                                        <summary>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </summary>
+                                        <ul>
+                                            <li><a class="credits" href="https://youtube.com/playlist?list=PLWKjhJtqVAbkArDMazoARtNz1aMwNWmvC&si=3yapcIRO-Ft74eCD" target="_blank">Full Playlist</a></li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+    }
+
+    function showBackendContentPlaylist() {
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+                <h3><span>Coming Soon</span></h3>
+              </div>`;
+    }
+
+    function showOtherLanguagesContentPlaylist() {
+      document.getElementById("main-content-type").innerHTML = "";
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+              <h3>These playlists are available only in <span>English Language</span></h3>
+            </div>
+            <div class="video-cat" id="video-cat">
+                <div class="category show" id="otherCatEng">
+                    <div class="heading-text">
+                        <h2 class="otherlang">Classic & Essential Languages</h2>
+                    </div>
+                    <hr>
+                    <div class="video-content-cont">
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>DSA using JAVA</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=5Nio215-DZBqHFGO&amp;list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>JAVA + DSA + Interview Questions by <a class="credits" href="https://www.youtube.com/@KunalKushwaha" target="_blank">Kunal Kushwaha</a></h3>
+                                <details>
+                                    <summary>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </summary>
+                                    <ul>
+                                        <li><a class="credits" href="https://youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&si=Cz_QO-wiiS0ddz-L" target="_blank">Full Playlist</a></li>
+                                    </ul>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="note">
+                            <h3><span>More Videos Coming Soon</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+    }
+
+    function showGoogleSheetsContentPlaylist() {
+      document.getElementById("main-content-type").innerHTML = "";
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+                <h3>These playlists are available only in <span>English Language</span></h3>
+              </div>
+              <div class="video-cat" id="video-cat">
+                  <div class="category show" id="googleScriptEng">
+                      <div class="heading-text">
+                          <h2 class="googleLang">Google Sheets</h2>
+                      </div>
+                      <hr>
+                      <div class="video-content-cont">
+                          <div class="video-container">
+                              <div class="video-category">
+                                  <h2>Appscript Language</h2>
+                              </div>
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=ZSCwfggOKka14hTo&amp;list=PLv9Pf9aNgemv62NNC5bXLR0CzeaIj5bcw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                              <div class="video-title">
+                                  <h3>Appscript by <a class="credits" href="https://www.youtube.com/@excelGoogleSheets" target="_blank">Learn Google Sheets & Excel Spreadsheets</a></h3>
+                                  <details>
+                                    <summary>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </summary>
+                                    <ul>
+                                        <li><a class="credits" href="https://www.youtube.com/playlist?list=PLv9Pf9aNgemv62NNC5bXLR0CzeaIj5bcw" target="_blank">Full Playlist</a></li>
+                                    </ul>
+                                  </details>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>`;
+    }
 
     function showUiuxContent() {
       document.getElementById("main-content-type").innerHTML = "";
@@ -110,179 +421,22 @@ form.onchange = function (e) {
                                 <h3>Adobe Xd UX Design For Beginners by <a class="credits" href="https://www.youtube.com/@BringYourOwnLaptop" target="_blank">Bring Your Own Laptop</a></h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="video-content-cont">
-                    <div class="video-container">
-                    <div class="video-category">
-                        <h2>Figma UI/UX Design</h2>
-                    </div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cKZEgtQUxlU?si=XoxwDgvAuwjdj4Wq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <div class="video-title">
-                          <h3>Figma UI/UX Design Course For Beginners by <a class="credits" href="https://www.youtube.com/@ZeroToMastery" target="_blank">Zero To Mastery</a></h3>
-                      </div>
-                  </div>
-                  <div class="video-container">
-                    <div class="video-category">
-                        <h2>Figma UX Design</h2>
-                    </div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kbZejnPXyLM?si=n6_TUZbjv_UTEXgL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <div class="video-title">
-                          <h3>Figma UX Design UI Essentials Course <br> For Beginners by <a class="credits" href="https://www.youtube.com/@BringYourOwnLaptop" target="_blank">Bring Your Own Laptop</a></h3>
-                      </div>
-                  </div>
-                    </div>
-                </div>
-            </div>`;
-    }
-
-    function showGoogleSheetsContent() {
-      document.getElementById("main-content-type").innerHTML = "";
-      videoContainer.style.display = "block";
-      videoContainer.innerHTML = `<div class="note">
-              <h3>These all videos are available only in <span>English Language</span></h3>
-            </div>
-            <div class="video-cat" id="video-cat">
-                <div class="category show" id="googleScriptEng">
-                    <div class="heading-text">
-                        <h2 class="googleLang">Google Sheets</h2>
-                    </div>
-                    <hr>
-                    <div class="video-content-cont">
                         <div class="video-container">
                             <div class="video-category">
-                                <h2>Appscript Language</h2>
+                                <h2>Figma UI/UX Design</h2>
                             </div>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=ZSCwfggOKka14hTo&amp;list=PLv9Pf9aNgemv62NNC5bXLR0CzeaIj5bcw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/cKZEgtQUxlU?si=XoxwDgvAuwjdj4Wq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="video-title">
-                                <h3>Appscript by <a class="credits" href="https://www.youtube.com/@excelGoogleSheets" target="_blank">Learn Google Sheets & Excel Spreadsheets</a></h3>
-                                <h3><a class="credits" href="https://www.youtube.com/playlist?list=PLv9Pf9aNgemv62NNC5bXLR0CzeaIj5bcw" target="_blank">Full Playlist Check from Here</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-    }
-
-    function showOtherLanguagesContent() {
-      document.getElementById("main-content-type").innerHTML = "";
-      videoContainer.style.display = "block";
-      videoContainer.innerHTML = `<div class="note">
-              <h3>These all videos are available only in <span>English Language</span></h3>
-            </div>
-            <div class="video-cat" id="video-cat">
-                <div class="category show" id="otherCatEng">
-                    <div class="heading-text">
-                        <h2 class="otherlang">Classic & Essential Languages</h2>
-                    </div>
-                    <hr>
-                    <div class="video-content-cont">
-                        <div class="video-container">
-                            <div class="video-category">
-                                <h2>C Language</h2>
-                            </div>
-                            <iframe width="560" height="315"
-                                src="https://www.youtube-nocookie.com/embed/87SH2Cn0s9A?si=4sYgB23x7KsG7oyd&start=6"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; gyroscope; encrypted-media; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                            <div class="video-title">
-                                <h3>C Language Beginner to Professional by <a class="credits" href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
-                            </div>
+                                  <h3>Figma UI/UX Design Course For Beginners by <a class="credits" href="https://www.youtube.com/@ZeroToMastery" target="_blank">Zero To Mastery</a></h3>
+                              </div>
                         </div>
                         <div class="video-container">
                             <div class="video-category">
-                                <h2>C++ Language</h2>
+                                <h2>Figma UX Design</h2>
                             </div>
-                            <iframe width="560" height="315"
-                                src="https://www.youtube-nocookie.com/embed/-TkoO8Z07hI?si=QWw14hfPLGlO8c0z&start=3"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; gyroscope; encrypted-media; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/kbZejnPXyLM?si=n6_TUZbjv_UTEXgL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="video-title">
-                                <h3>C++ Beginner to Professional by <a class="credits"
-                                        href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
-                            </div>
-                        </div>
-                        <div class="video-container">
-                            <div class="video-category">
-                                <h2>C# Language</h2>
-                            </div>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/wxznTygnRfQ?si=HwPBUZKkOrrAO7w9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <div class="video-title">
-                                <h3>C# Beginner to Professional by <a class="credits" href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="video-content-cont">
-                        <div class="video-container">
-                            <div class="video-category">
-                                <h2>Data Structure & Algorithms using JAVA</h2>
-                            </div>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/CBYHwZcbD-s?si=buFFkepiMlai8XU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <div class="video-title">
-                                <h3>Data Structure & Algorithms using JAVA Beginner to Professional by <a class="credits"
-                                        href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
-                            </div>
-                        </div>
-                        <div class="video-container">
-                            <div class="video-category">
-                                <h2>Data Structure Using C & C++</h2>
-                            </div>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/B31LgI4Y4DQ?si=AjsbM-GLlFkhJ1qB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <div class="video-title">
-                                <h3>Data Structure using C & C++ Beginner to Professional by <a class="credits"
-                                        href="https://www.youtube.com/@freecodecamp" target="_blank">FreeCodeCamp.org</a></h3>
-                            </div>
-                        </div>
-                        <div class="video-container">
-                            <div class="video-category">
-                                <h2>Data Structure & Algorithms using Python</h2>
-                            </div>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/pkYVOmU3MgA?si=7lGAobBPNmYT0tgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <div class="video-title">
-                                <h3>Data Structure using Python Beginner to Professional by <a class="credits"
-                                        href="https://www.youtube.com/@freecodecamp" target="_blank">FreeCodeCamp.org</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="video-content-cont">
-                        <div class="video-container">
-                            <div class="video-category">
-                                <h2>Java Language</h2>
-                            </div>
-                            <iframe width="560" height="315"
-                                src="https://www.youtube-nocookie.com/embed/xk4_1vDrzzo?si=FpTwyteKoV3hncrl&start=1"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                            <div class="video-title">
-                                <h3>Java Beginner to Professional by <a class="credits"
-                                        href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
-                            </div>
-                        </div>
-                        <div class="video-container">
-                            <div class="video-category">
-                                <h2>Java GUI Course</h2>
-                            </div>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Kmgo00avvEw?si=wmVMuEZ6-DTigFNd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <div class="video-title">
-                                <h3>Java GUI Beginner to Professional by <a class="credits"
-                                        href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
-                            </div>
-                        </div>
-                        <div class="video-container">
-                            <div class="video-category">
-                                <h2>Python</h2>
-                            </div>
-                            <iframe width="560" height="315"
-                                src="https://www.youtube-nocookie.com/embed/XKHEtdqhLK8?si=8Z_Frdxbg-QPHfPy&start=8"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; gyroscope; encrypted-media; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                            <div class="video-title">
-                                <h3>Python Beginner to Professional by <a class="credits"
-                                        href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a>
-                                </h3>
+                                  <h3>Figma UX Design UI Essentials Course <br> For Beginners by <a class="credits" href="https://www.youtube.com/@BringYourOwnLaptop" target="_blank">Bring Your Own Laptop</a></h3>
                             </div>
                         </div>
                     </div>
@@ -302,6 +456,16 @@ form.onchange = function (e) {
                     </div>
                     <hr>
                     <div class="video-content-cont">
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>Frontend Course</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZxKM3DCV2kE?si=mTZ8yVxsEoPk6ojC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Full Frontend Course From Beginner to Professional by <a class="credits" href="https://www.youtube.com/@codedamn" target="_blank">Mehul-Codedamn</a>
+                                </h3>
+                            </div>
+                        </div>
                         <div class="video-container">
                             <div class="video-category">
                                 <h2>HTML, CSS</h2>
@@ -334,7 +498,7 @@ form.onchange = function (e) {
                         </div>
                         <div class="video-container">
                             <div class="video-category">
-                                <h2>Javascript</h2>
+                                <h2>Javascript #1</h2>
                             </div>
                             <iframe width="560" height="315"
                                 src="https://www.youtube-nocookie.com/embed/H3XIJYEPdus?si=NKVliz5cx8T4gGSV"
@@ -348,8 +512,17 @@ form.onchange = function (e) {
                                 </h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="video-content-cont">
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>Javascript #2</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/EerdGm-ehJQ?si=jL3WSI5nRYs8Copj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Javascript From Beginner to Professional by <a class="credits"
+                                        href="https://www.youtube.com/@supersimpledev" target="_blank">SuperSimpleDev</a>
+                                </h3>
+                            </div>
+                        </div>
                         <div class="video-container">
                             <div class="video-category">
                                 <h2>React.JS</h2>
@@ -361,21 +534,6 @@ form.onchange = function (e) {
                                 allowfullscreen></iframe>
                             <div class="video-title">
                                 <h3>React.js From Beginner to Professional by <a class="credits"
-                                        href="https://www.youtube.com/@huxnwebdev" target="_blank">HuXn Webdev</a>
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="video-container">
-                            <div class="video-category">
-                                <h2>Typescript</h2>
-                            </div>
-                            <iframe width="560" height="315"
-                                src="https://www.youtube-nocookie.com/embed/zeCDuo74uzA?si=lsrT19i1DLHsWtXp"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; gyroscope;  encrypted-media; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                            <div class="video-title">
-                                <h3>Typescript From Beginner to Professional by <a class="credits"
                                         href="https://www.youtube.com/@huxnwebdev" target="_blank">HuXn Webdev</a>
                                 </h3>
                             </div>
@@ -395,8 +553,21 @@ form.onchange = function (e) {
                                 </h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="video-content-cont">
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>Typescript</h2>
+                            </div>
+                            <iframe width="560" height="315"
+                                src="https://www.youtube-nocookie.com/embed/zeCDuo74uzA?si=lsrT19i1DLHsWtXp"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; gyroscope;  encrypted-media; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>Typescript From Beginner to Professional by <a class="credits"
+                                        href="https://www.youtube.com/@huxnwebdev" target="_blank">HuXn Webdev</a>
+                                </h3>
+                            </div>
+                        </div>
                         <div class="video-container">
                             <div class="video-category">
                                 <h2>Vue.js</h2>
@@ -455,8 +626,6 @@ form.onchange = function (e) {
                                 </h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="video-content-cont">
                         <div class="video-container">
                             <div class="video-category">
                                 <h2>Spring for JAVA</h2>
@@ -487,8 +656,6 @@ form.onchange = function (e) {
                                 </h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="video-content-cont">
                         <div class="video-container">
                             <div class="video-category">
                                 <h2>ASP.Net for C#</h2>
@@ -503,6 +670,157 @@ form.onchange = function (e) {
                 </div>
             </div>`;
     }
+
+    function showOtherLanguagesContent() {
+      document.getElementById("main-content-type").innerHTML = "";
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+                <h3>These all videos are available only in <span>English Language</span></h3>
+              </div>
+              <div class="video-cat" id="video-cat">
+                  <div class="category show" id="otherCatEng">
+                      <div class="heading-text">
+                          <h2 class="otherlang">Classic & Essential Languages</h2>
+                      </div>
+                      <hr>
+                      <div class="video-content-cont">
+                          <div class="video-container">
+                              <div class="video-category">
+                                  <h2>C Language</h2>
+                              </div>
+                              <iframe width="560" height="315"
+                                  src="https://www.youtube-nocookie.com/embed/87SH2Cn0s9A?si=4sYgB23x7KsG7oyd&start=6"
+                                  title="YouTube video player" frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; gyroscope; encrypted-media; picture-in-picture; web-share"
+                                  allowfullscreen></iframe>
+                              <div class="video-title">
+                                  <h3>C Language Beginner to Professional by <a class="credits" href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
+                              </div>
+                          </div>
+                          <div class="video-container">
+                              <div class="video-category">
+                                  <h2>C++ Language</h2>
+                              </div>
+                              <iframe width="560" height="315"
+                                  src="https://www.youtube-nocookie.com/embed/-TkoO8Z07hI?si=QWw14hfPLGlO8c0z&start=3"
+                                  title="YouTube video player" frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; gyroscope; encrypted-media; picture-in-picture; web-share"
+                                  allowfullscreen></iframe>
+                              <div class="video-title">
+                                  <h3>C++ Beginner to Professional by <a class="credits"
+                                          href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
+                              </div>
+                          </div>
+                          <div class="video-container">
+                              <div class="video-category">
+                                  <h2>C# Language</h2>
+                              </div>
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/wxznTygnRfQ?si=HwPBUZKkOrrAO7w9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                              <div class="video-title">
+                                  <h3>C# Beginner to Professional by <a class="credits" href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
+                              </div>
+                          </div>
+                          <div class="video-container">
+                              <div class="video-category">
+                                  <h2>Data Structure & Algorithms using JAVA</h2>
+                              </div>
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/CBYHwZcbD-s?si=buFFkepiMlai8XU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                              <div class="video-title">
+                                  <h3>Data Structure & Algorithms using JAVA Beginner to Professional by <a class="credits"
+                                          href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
+                              </div>
+                          </div>
+                          <div class="video-container">
+                              <div class="video-category">
+                                  <h2>Data Structure Using C & C++</h2>
+                              </div>
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/B31LgI4Y4DQ?si=AjsbM-GLlFkhJ1qB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                              <div class="video-title">
+                                  <h3>Data Structure using C & C++ Beginner to Professional by <a class="credits"
+                                          href="https://www.youtube.com/@freecodecamp" target="_blank">FreeCodeCamp.org</a></h3>
+                              </div>
+                          </div>
+                          <div class="video-container">
+                              <div class="video-category">
+                                  <h2>Data Structure & Algorithms using Python</h2>
+                              </div>
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/pkYVOmU3MgA?si=7lGAobBPNmYT0tgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                              <div class="video-title">
+                                  <h3>Data Structure using Python Beginner to Professional by <a class="credits"
+                                          href="https://www.youtube.com/@freecodecamp" target="_blank">FreeCodeCamp.org</a></h3>
+                              </div>
+                          </div>
+                          <div class="video-container">
+                              <div class="video-category">
+                                  <h2>Java Language</h2>
+                              </div>
+                              <iframe width="560" height="315"
+                                  src="https://www.youtube-nocookie.com/embed/xk4_1vDrzzo?si=FpTwyteKoV3hncrl&start=1"
+                                  title="YouTube video player" frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                  allowfullscreen></iframe>
+                              <div class="video-title">
+                                  <h3>Java Beginner to Professional by <a class="credits"
+                                          href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
+                              </div>
+                          </div>
+                          <div class="video-container">
+                              <div class="video-category">
+                                  <h2>Java GUI Course</h2>
+                              </div>
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/Kmgo00avvEw?si=wmVMuEZ6-DTigFNd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                              <div class="video-title">
+                                  <h3>Java GUI Beginner to Professional by <a class="credits"
+                                          href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a></h3>
+                              </div>
+                          </div>
+                          <div class="video-container">
+                              <div class="video-category">
+                                  <h2>Python</h2>
+                              </div>
+                              <iframe width="560" height="315"
+                                  src="https://www.youtube-nocookie.com/embed/XKHEtdqhLK8?si=8Z_Frdxbg-QPHfPy&start=8"
+                                  title="YouTube video player" frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; gyroscope; encrypted-media; picture-in-picture; web-share"
+                                  allowfullscreen></iframe>
+                              <div class="video-title">
+                                  <h3>Python Beginner to Professional by <a class="credits"
+                                          href="https://www.youtube.com/@BroCodez" target="_blank">Bro Code</a>
+                                  </h3>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>`;
+    }
+
+    // function showGoogleSheetsContent() {
+    //   document.getElementById("main-content-type").innerHTML = "";
+    //   videoContainer.style.display = "block";
+    //   videoContainer.innerHTML = `<div class="note">
+    //           <h3>These all videos are available only in <span>English Language</span></h3>
+    //         </div>
+    //         <div class="video-cat" id="video-cat">
+    //             <div class="category show" id="googleScriptEng">
+    //                 <div class="heading-text">
+    //                     <h2 class="googleLang">Google Sheets</h2>
+    //                 </div>
+    //                 <hr>
+    //                 <div class="video-content-cont">
+    //                     <div class="video-container">
+    //                         <div class="video-category">
+    //                             <h2>Appscript Language</h2>
+    //                         </div>
+    //                         <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=ZSCwfggOKka14hTo&amp;list=PLv9Pf9aNgemv62NNC5bXLR0CzeaIj5bcw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    //                         <div class="video-title">
+    //                             <h3>Appscript by <a class="credits" href="https://www.youtube.com/@excelGoogleSheets" target="_blank">Learn Google Sheets & Excel Spreadsheets</a></h3>
+    //                             <h3><a class="credits" href="https://www.youtube.com/playlist?list=PLv9Pf9aNgemv62NNC5bXLR0CzeaIj5bcw" target="_blank">Full Playlist Check from Here</a></h3>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+    //             </div>
+    //         </div>`;
+    // }
   } else if (opt === "hindi") {
     catButtons.style.display = "block";
     videoContainer.style.display = "none";
@@ -510,6 +828,44 @@ form.onchange = function (e) {
     // alertMsg.innerHTML =
     //   "<span>New Content Added in English Language Also.</span>";
     // console.log("Hindi");
+
+    function showUiuxContentPlaylist() {
+      document.getElementById("main-content-type").innerHTML = "";
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+                                    <h3><span>New Content Added in English Language Currently. Please Try Again Later! :) </span></h3>
+                                </div>`;
+    }
+
+    function showFrontendContentPlaylist() {
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+                                    <h3><span>New Content Added in English Language Currently. Please Try Again Later! :) </span></h3>
+                                </div>`;
+    }
+
+    function showBackendContentPlaylist() {
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+                                    <h3><span>New Content Added in English Language Currently. Please Try Again Later! :) </span></h3>
+                                </div>`;
+    }
+
+    function showOtherLanguagesContentPlaylist() {
+      document.getElementById("main-content-type").innerHTML = "";
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+                                    <h3><span>New Content Added in English Language Currently. Please Try Again Later! :) </span></h3>
+                                </div>`;
+    }
+
+    function showGoogleSheetsContentPlaylist() {
+      document.getElementById("main-content-type").innerHTML = "";
+      videoContainer.style.display = "block";
+      videoContainer.innerHTML = `<div class="note">
+                                   <h3><span>New Content Added in English Language Currently. Please Try Again Later! :) </span></h3>
+                                </div>`;
+    }
 
     function showUiuxContent() {
       document.getElementById("main-content-type").innerHTML = "";
@@ -547,31 +903,31 @@ form.onchange = function (e) {
               </div>`;
     }
 
-    function showGoogleSheetsContent() {
-      document.getElementById("main-content-type").innerHTML = "";
-      videoContainer.style.display = "block";
-      videoContainer.innerHTML = `<div class="note">
-                <h3>These all videos are available only in <span>Hindi Language</span></h3>
-              </div>
-              <div class="video-cat" id="video-cat">
-                  <div class="category show" id="googleScriptHindi">
-                      <div class="heading-text">
-                          <h2 class="googleLang">Google Sheets</h2>
-                      </div>
-                      <hr>
-                      <div class="video-content-cont">
-                          <div class="video-container ">
-                              <div class="video-category">
-                                  <h2>Appscript Language</h2>
-                              </div>
-                              <div class="coming-up-text">
-                                <h2>Video Not Available In Hindi Currently. <br>Please, Come Back Later!</h2>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>`;
-    }
+    // function showGoogleSheetsContent() {
+    //   document.getElementById("main-content-type").innerHTML = "";
+    //   videoContainer.style.display = "block";
+    //   videoContainer.innerHTML = `<div class="note">
+    //             <h3>These all videos are available only in <span>Hindi Language</span></h3>
+    //           </div>
+    //           <div class="video-cat" id="video-cat">
+    //               <div class="category show" id="googleScriptHindi">
+    //                   <div class="heading-text">
+    //                       <h2 class="googleLang">Google Sheets</h2>
+    //                   </div>
+    //                   <hr>
+    //                   <div class="video-content-cont">
+    //                       <div class="video-container ">
+    //                           <div class="video-category">
+    //                               <h2>Appscript Language</h2>
+    //                           </div>
+    //                           <div class="coming-up-text">
+    //                             <h2>Video Not Available In Hindi Currently. <br>Please, Come Back Later!</h2>
+    //                           </div>
+    //                       </div>
+    //                   </div>
+    //               </div>
+    //           </div>`;
+    // }
 
     function showOtherLanguagesContent() {
       document.getElementById("main-content-type").innerHTML = "";
@@ -614,8 +970,6 @@ form.onchange = function (e) {
                                     <h3>C# language For Beginners by <a class="credits" href="https://www.youtube.com/@CodeWithHarry" target="_blank">CodeWithHarry</a></h3>
                                 </div>
                             </div>
-                        </div>
-                        <div class="video-content-cont">
                             <div class="video-container">
                                 <div class="video-category">
                                     <h2>C# Game Development on Unity</h2>
@@ -643,8 +997,6 @@ form.onchange = function (e) {
                                     <h3>DSA using Python For Beginners by <a class="credits" href="https://www.youtube.com/@campusx-official" target="_blank">CampusX</a></h3>
                                 </div>
                             </div>
-                        </div>
-                        <div class="video-content-cont">
                             <div class="video-container">
                                 <div class="video-category">
                                     <h2>Java Language</h2>
@@ -716,8 +1068,6 @@ form.onchange = function (e) {
                                     <h3>CSS For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@ThapaTechnical" target="_blank">Thapa Technical</a></h3>
                                 </div>
                             </div>
-                        </div>
-                        <div class="video-content-cont">
                             <div class="video-container">
                                 <div class="video-category">
                                     <h2>Javascript</h2>
@@ -745,8 +1095,6 @@ form.onchange = function (e) {
                                     <h3>Typescript For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@6PackProgrammer" target="_blank">6 Pack Programmer</a></h3>
                                 </div>
                             </div>
-                        </div>
-                        <div class="video-content-cont">
                             <div class="video-container">
                                 <div class="video-category">
                                     <h2>Angular.JS</h2>
