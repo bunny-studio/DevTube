@@ -52,6 +52,8 @@ html {
     --svg-color: #81689D;
     --linear-gradient-color: linear-gradient(60deg, #f9ce34, #ee2a7b, #6228d7);
     --linear-gradient-color2: linear-gradient(60deg, #000000, #ffffffee, #ffffffee, #000000);
+    --skeloton-Ani-Color-Light: hsl(200, 5%, 70%);
+    --skeloton-Ani-Color-Dark: hsl(200, 5%, 95%);
 
     /* Font-Family */
     --poppins-sans: "Poppins", sans-serif;
@@ -461,9 +463,23 @@ main {
     padding: 0 10px;
 }
 
+.content .video-container>iframe::before {
+    opacity: .7;
+}
+
 .content .video-container>iframe {
-    background-color: var(--common-text-color);
     cursor: pointer;
+    animation: skelotonAni 1s linear infinite alternate;
+}
+
+@keyframes skelotonAni {
+    0% {
+        background-color: var(--skeloton-Ani-Color-Light);
+    }
+
+    100% {
+        background-color: var(--skeloton-Ani-Color-Dark);
+    }
 }
 
 .content .video-container>iframe,
