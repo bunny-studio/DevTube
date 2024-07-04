@@ -50,8 +50,10 @@ html {
     --highlight-color: #d29922;
     --highlight-bg-color: #bb800926;
     --svg-color: #81689D;
+    --linkedin-color: #0A66C2;
     --linear-gradient-color: linear-gradient(60deg, #f9ce34, #ee2a7b, #6228d7);
     --linear-gradient-color2: linear-gradient(60deg, #000000, #ffffffee, #ffffffee, #000000);
+    --linear-gradient-color3: linear-gradient(60deg, #0A66C2, #2e8ae7, #2e8ae7, #0A66C2);
     --skeloton-Ani-Color-Light: hsl(200, 5%, 70%);
     --skeloton-Ani-Color-Dark: hsl(200, 5%, 95%);
 
@@ -226,7 +228,6 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 90vh;
     height: auto;
 }
 
@@ -620,7 +621,7 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 160px);
     color: var(--heading-text-color);
 }
 
@@ -854,6 +855,10 @@ main {
 }
 
 /* Footer */
+/* .contactpage {
+    position: sticky;
+    bottom: 0;
+} */
 
 footer {
     display: flex;
@@ -890,18 +895,26 @@ footer .social-links>.github {
 }
 
 footer .social-links>.github::after {
+    right: 0;
+    background: var(--linear-gradient-color2);
+    box-shadow: 0 -12px 25px 2px var(--common-text-color);
+
+}
+
+footer .social-links>.linkedin::after,
+footer .social-links>.instagram::after,
+footer .social-links>.github::after {
     position: absolute;
     content: "";
-    right: 0;
     bottom: -5px;
     width: 0%;
     height: 5px;
     border-radius: 5px;
-    background-image: var(--linear-gradient-color2);
-    box-shadow: 0 -12px 25px 2px var(--common-text-color);
     transition: 0.2s all ease-in-out;
 }
 
+footer .social-links>.linkedin:hover::after,
+footer .social-links>.instagram:hover::after,
 footer .social-links>.github:hover::after {
     width: 100%;
 }
@@ -914,20 +927,20 @@ footer .social-links>.instagram {
 }
 
 footer .social-links>.instagram::after {
-    position: absolute;
-    content: "";
     left: 0;
-    bottom: -5px;
-    width: 0%;
-    height: 5px;
-    border-radius: 5px;
-    background-image: var(--linear-gradient-color);
+    background: var(--linear-gradient-color);
     box-shadow: 0 -12px 25px 2px var(--text-color-two);
-    transition: 0.2s all ease-in-out;
 }
 
-footer .social-links>.instagram:hover::after {
-    width: 100%;
+footer .social-links>.linkedin {
+    color: var(--linkedin-color);
+    position: relative;
+}
+
+footer .social-links>.linkedin::after {
+    right: 0;
+    background: var(--linear-gradient-color3);
+    box-shadow: 0 -12px 25px 2px var(--linkedin-color);
 }
 
 footer .copyright {
@@ -937,5 +950,5 @@ footer .copyright {
 footer .copyright p {
     font-size: 18px;
     font-weight: 500;
-    color: var(--fade-text-color);
+    color: var(--fade-text-color-two);
 }
