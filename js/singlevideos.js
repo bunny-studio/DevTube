@@ -468,7 +468,7 @@ form.onchange = function (e) {
                         </div>
                         <div class="video-container">
                             <div class="video-category">
-                                <h2>HTML, CSS</h2>
+                                <h2>#1 HTML, CSS</h2>
                             </div>
                             <iframe width="560" height="315"
                                 src="https://www.youtube-nocookie.com/embed/bWACo_pvKxg?si=wDl6dZqUlEklEFkh"
@@ -477,6 +477,16 @@ form.onchange = function (e) {
                                 allowfullscreen></iframe>
                             <div class="video-title">
                                 <h3>HTML & CSS From Beginner to Professional by <a class="credits" href="https://www.youtube.com/@huxnwebdev" target="_blank">HuXn Webdev</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <div class="video-category">
+                                <h2>#2 HTML, CSS</h2>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/G3e-cpL7ofc?si=ab8rroUOh8xIbFBz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="video-title">
+                                <h3>HTML & CSS From Beginner to Professional by <a class="credits" href="https://www.youtube.com/@SuperSimpleDev" target="_blank">SuperSimpleDev</a>
                                 </h3>
                             </div>
                         </div>
@@ -498,7 +508,7 @@ form.onchange = function (e) {
                         </div>
                         <div class="video-container">
                             <div class="video-category">
-                                <h2>Javascript #1</h2>
+                                <h2>#1 Javascript</h2>
                             </div>
                             <iframe width="560" height="315"
                                 src="https://www.youtube-nocookie.com/embed/H3XIJYEPdus?si=NKVliz5cx8T4gGSV"
@@ -514,7 +524,7 @@ form.onchange = function (e) {
                         </div>
                         <div class="video-container">
                             <div class="video-category">
-                                <h2>Javascript #2</h2>
+                                <h2>#2 Javascript</h2>
                             </div>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/EerdGm-ehJQ?si=jL3WSI5nRYs8Copj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="video-title">
