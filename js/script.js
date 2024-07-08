@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
           msg.innerText = "";
           msg.classList.remove("popupGreen");
         }, 5000);
-      })
+      });
       .catch((error) => {
         console.error("Error:", error);
         submitBtn.innerText = "Submit";
@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
         msg.innerText = "Failed to send data. Please try again.";
       });
   });
-  ZZZ;
 });
 
 function popupMsg() {
