@@ -810,6 +810,7 @@ main {
     outline: none;
     font-size: 14px;
     font-weight: 500;
+    margin-right: 20px;
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 5px;
