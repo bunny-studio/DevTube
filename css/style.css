@@ -830,7 +830,8 @@ main {
     background-color: var(--msg-color-two);
 }
 
-.contactForm .row button[type="submit"]:hover {
+.contactForm .row button[type="submit"]:hover,
+.contactForm .row button[type="submit"]:focus-visible {
     background-color: transparent;
     border: 2px solid var(--msg-color-two);
     color: var(--msg-color-two);
