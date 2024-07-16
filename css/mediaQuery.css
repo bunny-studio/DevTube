@@ -66,6 +66,10 @@
     .about-container {
         height: max-content;
     }
+
+    .home .button {
+        display: none;
+    }
 }
 
 @media (max-width:1120px) {
