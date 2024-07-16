@@ -24,12 +24,14 @@ navBarOpen.addEventListener("click", () => {
   navBar.style.display = "block";
   navBarOpen.style.display = "none";
   navBarClose.style.display = "block";
+  document.body.classList.add("no-scroll");
 });
 
 navBarClose.addEventListener("click", () => {
   navBar.style.right = "-100%";
   navBarOpen.style.display = "block";
   navBarClose.style.display = "none";
+  document.body.classList.add("no-scroll");
 });
 
 navLinks.forEach((link) => {
@@ -37,5 +39,6 @@ navLinks.forEach((link) => {
     navBar.style.right = "-100%";
     navBarOpen.style.display = "block";
     navBarClose.style.display = "none";
+    document.body.classList.add("no-scroll");
   });
 });

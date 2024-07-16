@@ -8,7 +8,7 @@
     html {
         width: 100%;
         height: fit-content !important;
-        overflow-x: hidden !important;
+        overflow-x: hidden;
     }
 
     header .menu-bar {
@@ -29,6 +29,10 @@
     /* #click:checked~ul {
         right: 0%;
     } */
+
+    .no-scroll {
+        overflow: hidden !important;
+    }
 
     header nav ul {
         top: 80px;
