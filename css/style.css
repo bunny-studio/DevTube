@@ -119,6 +119,7 @@ body {
     margin: 0;
 }
 
+#navBtnClose,
 #click {
     display: none;
 }

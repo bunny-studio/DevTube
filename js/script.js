@@ -1,20 +1,3 @@
-// Contact Page Data Transferring to Google Sheets
-// function getFormattedDateTime() {
-//   const now = new Date();
-//   const year = now.getFullYear();
-//   const month = ("0" + (now.getMonth() + 1)).slice(-2);
-//   const day = ("0" + now.getDate()).slice(-2);
-//   const hours = ("0" + now.getHours()).slice(-2);
-//   const minutes = ("0" + now.getMinutes()).slice(-2);
-//   return `${year}-${month}-${day}T${hours}:${minutes}`;
-// }
-
-// const timestamp = document.getElementById("timestamp");
-// timestamp.value = getFormattedDateTime();
-// setInterval(() => {
-//   timestamp.value = getFormattedDateTime();
-// }, 1000);
-
 const forms = document.getElementById("contact-Form");
 window.onload = () => {
   forms.reset();
@@ -30,3 +13,29 @@ function popupMsg() {
     popupContainer.style.right = "-400px";
   });
 }
+
+const navBarOpen = document.getElementById("navBtn");
+const navBarClose = document.getElementById("navBtnClose");
+const navBar = document.getElementById("sideMenu");
+const navLinks = navBar.querySelectorAll("a");
+
+navBarOpen.addEventListener("click", () => {
+  navBar.style.right = "0";
+  navBar.style.display = "block";
+  navBarOpen.style.display = "none";
+  navBarClose.style.display = "block";
+});
+
+navBarClose.addEventListener("click", () => {
+  navBar.style.right = "-100%";
+  navBarOpen.style.display = "block";
+  navBarClose.style.display = "none";
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navBar.style.right = "-100%";
+    navBarOpen.style.display = "block";
+    navBarClose.style.display = "none";
+  });
+});
