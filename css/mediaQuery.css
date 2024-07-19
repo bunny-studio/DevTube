@@ -95,10 +95,6 @@
         position: fixed;
     }
 
-    header nav ul {
-        width: 45%;
-    }
-
     header nav ul li {
         margin: 40px 0 0;
     }
