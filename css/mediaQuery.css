@@ -185,6 +185,11 @@
         margin-top: 40px;
     }
 
+    header nav img {
+        width: 80%;
+        height: auto;
+    }
+
     .ppop .popup {
         width: 355px;
     }
