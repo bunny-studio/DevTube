@@ -850,15 +850,89 @@ form.onchange = function (e) {
     function showFrontendContentPlaylist() {
       videoContainer.style.display = "block";
       videoContainer.innerHTML = `<div class="note">
-                                    <h3><span>New Content Added in English Language Currently. Please Try Again Later! :) </span></h3>
-                                </div>`;
+                  <h3>These playlists are available only in <span>Hindi Language</span></h3>
+                </div>
+                <div class="video-cat">
+                    <div class="category show" id="webDevCatEng">
+                        <div class="heading-text">
+                            <h2>Front-End Development</h2>
+                        </div>
+                        <hr>
+                        <div class="video-content-cont">
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>#1 Frontend Course</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=4lDnrnVUuULmjLrA&amp;list=PLbtI3_MArDOkNtOan8BQkG6P8wf6pNVz-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>Full Frontend Course by <a class="credits" href="https://www.youtube.com/@sheryians" target="_blank">Sheryians Coding School</a>
+                                    </h3>
+                                    <details>
+                                        <summary>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </summary>
+                                        <ul>
+                                            <li><a class="credits" href="https://youtube.com/playlist?list=PLbtI3_MArDOkNtOan8BQkG6P8wf6pNVz-&si=4lDnrnVUuULmjLrA" target="_blank">Full Playlist</a></li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>#2 Frontend Course</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=QMz2acSCFeo8jz5E&amp;list=PLwGdqUZWnOp0t1YdY2ut9pgA3tqXv64Z3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>Full Frontend Course by <a class="credits" href="https://www.youtube.com/@thapatechnical" target="_blank">Thapa Technical</a>
+                                    </h3>
+                                    <details>
+                                        <summary>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </summary>
+                                        <ul>
+                                            <li><a class="credits" href="https://youtube.com/playlist?list=PLwGdqUZWnOp0t1YdY2ut9pgA3tqXv64Z3&si=GW09Xl-ZbSGeH9Wh" target="_blank">Full Playlist</a></li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
     }
 
     function showBackendContentPlaylist() {
       videoContainer.style.display = "block";
       videoContainer.innerHTML = `<div class="note">
-                                    <h3><span>New Content Added in English Language Currently. Please Try Again Later! :) </span></h3>
-                                </div>`;
+                  <h3>These playlists are available only in <span>Hindi Language</span></h3>
+                </div>
+                <div class="video-cat">
+                    <div class="category show" id="webDevCatEng">
+                        <div class="heading-text">
+                            <h2>Front-End Development</h2>
+                        </div>
+                        <hr>
+                        <div class="video-content-cont">
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>#1 Backend Course</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=wqp6yWkta3Jecu33&amp;list=PLbtI3_MArDOkXRLxdMt1NOMtCS-84ibHH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>Full Backend Course by <a class="credits" href="https://www.youtube.com/@sheryians" target="_blank">Sheryians Coding School</a>
+                                    </h3>
+                                    <details>
+                                        <summary>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </summary>
+                                        <ul>
+                                            <li><a class="credits" href="https://youtube.com/playlist?list=PLbtI3_MArDOkXRLxdMt1NOMtCS-84ibHH&si=wXC4lp9a_bU-SIog" target="_blank">Full Playlist</a></li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
     }
 
     function showOtherLanguagesContentPlaylist() {
@@ -1009,7 +1083,7 @@ form.onchange = function (e) {
                             </div>
                             <div class="video-container">
                                 <div class="video-category">
-                                    <h2>Java Language</h2>
+                                    <h2>#1 Java Language</h2>
                                 </div>
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ECT-ehj-q7s?si=ZiFisRud5NPx3tAh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 <div class="video-title">
@@ -1018,7 +1092,7 @@ form.onchange = function (e) {
                             </div>
                             <div class="video-container">
                                 <div class="video-category">
-                                    <h2>Java Language</h2>
+                                    <h2>#2 Java Language</h2>
                                 </div>
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/32DLasxoOiM?si=kkS7nATXsu2KzVyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 <div class="video-title">
@@ -1027,11 +1101,20 @@ form.onchange = function (e) {
                             </div>
                             <div class="video-container">
                                 <div class="video-category">
-                                    <h2>Python</h2>
+                                    <h2>#1 Python</h2>
                                 </div>
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ERCMXc8x7mc?si=vfyVDMIpwH9Q_b6m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 <div class="video-title">
                                     <h3>Python language For Beginners by <a class="credits" href="https://www.youtube.com/@ApnaCollegeOfficial" target="_blank">Apna College</a></h3>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>#2 Python</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/UrsmFxEIp5k?si=eV2lHg7uQrijnriI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title">
+                                    <h3>Python language For Beginners by <a class="credits" href="https://www.youtube.com/@codewithharry" target="_blank">CodeWithHarry</a></h3>
                                 </div>
                             </div>
                       </div>
