@@ -468,8 +468,8 @@ main {
 
 .content .recommended:before {
     content: "Recommended";
-    width: 46.7%;
-    left: 50%;
+    width:auto;
+    left: 75.2%;
     top: 0;
     position: absolute;
     height: max-content;

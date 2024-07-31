@@ -132,15 +132,7 @@
     .content .recommended:before {
         content: "\f005";
         font-family: 'Font Awesome 5 Free';
-        width: auto;
         left: 90.7%;
-        top: 0;
-        position: absolute;
-        height: max-content;
-        background-color: var(--bg-color);
-        color: var(--alert-msg-bright-color);
-        padding: 10px;
-        border-top-right-radius: 10px;
     }
 
     .content .video-container>iframe {

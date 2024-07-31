@@ -466,7 +466,7 @@ form.onchange = function (e) {
                                 </h3>
                             </div>
                         </div>
-                        <div class="video-container recommended" title="Recommended">
+                        <div class="video-container">
                             <div class="video-category">
                                 <h2>#1 HTML, CSS</h2>
                             </div>
@@ -480,7 +480,7 @@ form.onchange = function (e) {
                                 </h3>
                             </div>
                         </div>
-                        <div class="video-container">
+                        <div class="video-container recommended" title="Recommended">
                             <div class="video-category">
                                 <h2>#2 HTML, CSS</h2>
                             </div>
