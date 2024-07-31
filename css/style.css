@@ -463,6 +463,21 @@ main {
     height: 100%;
     background-color: var(--header-footer-bg);
     padding: 0 10px;
+    position: relative;
+}
+
+.content .recommended:before {
+    content: "Recommended";
+    width: 46.7%;
+    left: 50%;
+    top: 0;
+    position: absolute;
+    height: max-content;
+    background-color: var(--bg-color);
+    color: var(--alert-msg-bright-color);
+    padding: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 0 10px 2px var(--highlight-color);
 }
 
 .content .video-container>iframe::before {

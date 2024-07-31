@@ -261,7 +261,7 @@ form.onchange = function (e) {
                             </div>
                             <div class="video-container">
                                 <div class="video-category">
-                                    <h2>React.JS</h2>
+                                    <h2>#1 React.JS</h2>
                                 </div>
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=uJPMZEHnYHk2eIq3&amp;list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 <div class="video-title">
@@ -279,7 +279,7 @@ form.onchange = function (e) {
                             </div>
                             <div class="video-container">
                                 <div class="video-category">
-                                    <h2>React.JS + Projects</h2>
+                                    <h2>#2 React.JS</h2>
                                 </div>
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=zkqb2tVjuM8kVC9w&amp;list=PLWKjhJtqVAbkArDMazoARtNz1aMwNWmvC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 <div class="video-title">
@@ -321,7 +321,7 @@ form.onchange = function (e) {
                     </div>
                     <hr>
                     <div class="video-content-cont">
-                        <div class="video-container">
+                        <div class="video-container recommended" title="Recommended">
                             <div class="video-category">
                                 <h2>DSA using JAVA</h2>
                             </div>
@@ -359,7 +359,7 @@ form.onchange = function (e) {
                       </div>
                       <hr>
                       <div class="video-content-cont">
-                          <div class="video-container">
+                          <div class="video-container recommended" title="Recommended">
                               <div class="video-category">
                                   <h2>Appscript Language</h2>
                               </div>
@@ -394,7 +394,7 @@ form.onchange = function (e) {
                     </div>
                     <hr>
                     <div class="video-content-cont">
-                        <div class="video-container">
+                        <div class="video-container recommended" title="Recommended">
                             <div class="video-category">
                                 <h2>Figma Introduction</h2>
                             </div>
@@ -421,7 +421,7 @@ form.onchange = function (e) {
                                 <h3>Adobe Xd UX Design For Beginners by <a class="credits" href="https://www.youtube.com/@BringYourOwnLaptop" target="_blank">Bring Your Own Laptop</a></h3>
                             </div>
                         </div>
-                        <div class="video-container">
+                        <div class="video-container recommended" title="Recommended">
                             <div class="video-category">
                                 <h2>Figma UI/UX Design</h2>
                             </div>
@@ -456,7 +456,7 @@ form.onchange = function (e) {
                     </div>
                     <hr>
                     <div class="video-content-cont">
-                        <div class="video-container">
+                        <div class="video-container recommended" title="Recommended">
                             <div class="video-category">
                                 <h2>Frontend Course</h2>
                             </div>
@@ -466,7 +466,7 @@ form.onchange = function (e) {
                                 </h3>
                             </div>
                         </div>
-                        <div class="video-container">
+                        <div class="video-container recommended" title="Recommended">
                             <div class="video-category">
                                 <h2>#1 HTML, CSS</h2>
                             </div>
@@ -522,7 +522,7 @@ form.onchange = function (e) {
                                 </h3>
                             </div>
                         </div>
-                        <div class="video-container">
+                        <div class="video-container recommended" title="Recommended">
                             <div class="video-category">
                                 <h2>#2 Javascript</h2>
                             </div>
@@ -859,7 +859,7 @@ form.onchange = function (e) {
                         </div>
                         <hr>
                         <div class="video-content-cont">
-                            <div class="video-container">
+                            <div class="video-container recommended" title="Recommended">
                                 <div class="video-category">
                                     <h2>#1 Frontend Course</h2>
                                 </div>
