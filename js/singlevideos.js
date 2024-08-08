@@ -1253,7 +1253,7 @@ form.onchange = function (e) {
                         </div>
                         <hr>
                         <div class="video-content-cont">
-                            <div class="video-container ">
+                            <div class="video-container">
                                 <div class="video-category">
                                     <h2>Node.JS/ Express.JS/ MongoDB</h2>
                                 </div>
@@ -1262,7 +1262,25 @@ form.onchange = function (e) {
                                     <h3>Node.JS For Beginners to Advanced by <a class="credits" href="https://www.youtube.com/@coderdost" target="_blank">Coder Dost</a></h3>
                                 </div>
                             </div>
-                            <div class="video-container ">
+                            <div class="video-container recommended" title="Recommended">
+                                <div class="video-category">
+                                    <h2>#1 MySQL</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Bp703NkC00Q?si=X3Ak97rBU9c8xMF_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title" title="Credits">
+                                    <h3>MySQL For Beginners by <a class="credits" href="https://www.youtube.com/@DataProdigy" target="_blank">Data Prodigy</a></h3>
+                                </div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-category">
+                                    <h2>#2 MySQL</h2>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/hlGoQC332VM?si=tje9eTxvOUWXLqBG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="video-title" title="Credits">
+                                    <h3>MySQL For Beginners by <a class="credits" href="https://www.youtube.com/@ApnaCollegeOfficial" target="_blank">Apna College</a></h3>
+                                </div>
+                            </div>
+                            <div class="video-container">
                                 <div class="video-category">
                                     <h2>PHP</h2>
                                 </div>
